@@ -1,5 +1,5 @@
 {
-  "name": "react-design-tokens-presenter",
+  "name": "react-tokens-presenter",
   "version": "0.1.0",
   "main": "build/index.js",
   "module": "build/index.esm.js",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/11joselu/react-design-tokens-presenter.git"
+    "url": "https://github.com/11joselu/react-tokens-presenter.git"
   },
   "keywords": [
     "Presenter",
@@ -28,9 +28,9 @@
   "author": "Harvey Delaney",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/11joselu/react-design-tokens-presenter/issues"
+    "url": "https://github.com/11joselu/react-tokens-presenter/issues"
   },
-  "homepage": "https://github.com/11joselu/react-design-tokens-presenter.git#readme",
+  "homepage": "https://github.com/11joselu/react-tokens-presenter.git#readme",
   "peerDependencies": {
     "react": ">=16.13.1",
     "react-dom": ">=16.13.1"

@@ -1,7 +1,7 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 import Button from './Button';
 import { Color } from 'react-design-tokens-presenter';
-import { scssParser } from 'design-tokens-parser';
+import { scssParser } from 'preprocessors-tokens-parser';
 
 <Meta title="Presenters/Color" component={Color} />
 
@@ -25,13 +25,21 @@ export const scssReq = require.context(
   /.ButtonTokens.scss$/
 );
 
-<!-- Create array of contents -->
+<!-- Create array of files -->
 
-export const contents = scssReq.keys();
-export const results = contents.map(scssParser);
+export const files = scssReq.keys();
 
 <div>
-  {results.map((result) => {
-    return <Color variableName={result.declaration} color={result.red}></Color>;
-  })}
+  {files
+    .filter((filename) => filename.includes('Button'))
+    // Read file contents
+    .map((filename) => scssReq(filename).default)
+    // parse the contents with a tokenizer
+    .map(scssParser)
+    .flat()
+    .map((result) => {
+      return (
+        <Color variableName={result.declaration} color={result.value}></Color>
+      );
+    })}
 </div>
