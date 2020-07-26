@@ -8,9 +8,9 @@ type CircleProps = {
 const Circle: FC<CircleProps> = styled.div.attrs({
   'data-testid': 'circle',
 })`
-  width: '50px';
-  height: '50px';
-  border-radius: '50%';
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   background-color: ${(props: CircleProps) => props.backgroundColor};
 `;
 
