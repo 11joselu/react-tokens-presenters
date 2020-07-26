@@ -43,7 +43,7 @@ npm run test
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/11joselu/react-design-tokens-presenter.git/issues).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/11joselu/react-design-tokens-presenter/issues).
 
 ## Show your support
 

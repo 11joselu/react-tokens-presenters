@@ -27,7 +27,7 @@
   "author": "Harvey Delaney",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/11joselu/react-design-tokens-presenter.git/issues"
+    "url": "https://github.com/11joselu/react-design-tokens-presenter/issues"
   },
   "homepage": "https://github.com/11joselu/react-design-tokens-presenter.git#readme",
   "peerDependencies": {
