@@ -1,15 +1,43 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { Meta, Props } from '@storybook/addon-docs/blocks';
 import Color from './Color';
 
 <Meta title="Presenters/Color" component={Color} />
 
-# Preview
+export const token = `
+     /**
+       * @tokens Color
+       */
+        $col-primary: #673ab7;
+        $col-secondary: #9c27b0;
+    `;
 
-<Preview>
-  <Story name="default">
-    <Color variableName="col-primary" color="#ff5d5d"></Color>
-  </Story>
-</Preview>
+export const expectedResult = [
+  {
+    declaration: 'col-primary',
+    value: '#673ab7',
+    token: 'Color',
+  },
+  {
+    declaration: 'col-secondary',
+    value: '#9c27b0',
+    token: 'Color',
+  },
+];
+
+# Color
+
+Convey meaning through color.
+
+<div>
+  {expectedResult.map((result) => {
+    return (
+      <>
+        <Color variableName={result.declaration} color={result.value}></Color>
+        <br></br>
+      </>
+    );
+  })}
+</div>
 
 ## Props
 
