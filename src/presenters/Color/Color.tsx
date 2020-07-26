@@ -11,7 +11,7 @@ const Color: FC<ColorProps> = ({ color, variableName }: ColorProps) => {
     <>
       <Circle backgroundColor={color} />
       <p>{color}</p>
-      <p>{variableName}</p>;
+      <p>{variableName}</p>
     </>
   );
 };

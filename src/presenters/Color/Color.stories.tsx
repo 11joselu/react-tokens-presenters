@@ -6,5 +6,5 @@ export default {
 };
 
 export const Primary = () => {
-  return <Color color="tomato" />;
+  return <Color color="tomato" variableName="col-primary" />;
 };
