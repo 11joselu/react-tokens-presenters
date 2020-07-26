@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import Circle from '../../ui/Circle/Circle';
+import Text from '../../ui/Text/Text';
 
 type ColorProps = {
   color: string;
@@ -10,8 +11,8 @@ const Color: FC<ColorProps> = ({ color, variableName }: ColorProps) => {
   return (
     <>
       <Circle backgroundColor={color} />
-      <p>{color}</p>
-      <p>{variableName}</p>
+      <Text>{variableName}</Text>
+      <Text isAlternative={true}>{color}</Text>
     </>
   );
 };

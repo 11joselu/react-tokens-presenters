@@ -5,6 +5,6 @@ export default {
   title: 'Color',
 };
 
-export const Primary = () => {
+export const Default = () => {
   return <Color color="tomato" variableName="col-primary" />;
 };
