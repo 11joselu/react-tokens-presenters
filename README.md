@@ -27,6 +27,16 @@
 npm i -S react-design-tokens-presenter
 ```
 
+## Usage
+
+Works well with [design-tokens-parser](https://github.com/11joselu/design-tokens-parser.git)
+
+See [demo](/demo) directory for examples
+
+## Presenters
+
+Presenters are used to render examples for your design tokens. [View all vailable presenters](https://react-design-tokens-presenter.netlify.app/)
+
 ## Run tests
 
 ```sh

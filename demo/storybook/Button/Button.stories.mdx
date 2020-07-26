@@ -1,0 +1,37 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import Button from './Button';
+import { Color } from 'react-design-tokens-presenter';
+import { scssParser } from 'design-tokens-parser';
+
+<Meta title="Presenters/Color" component={Color} />
+
+# Button
+
+Buttons are convenient tools when you need more traditional actions
+
+<Preview>
+  <Story name="all checkboxes">
+    <Button></Button>
+  </Story>
+</Preview>
+
+# CSS Properties
+
+<!-- Read Button tokens -->
+
+export const scssReq = require.context(
+  `!!raw-loader!../`,
+  true,
+  /.ButtonTokens.scss$/
+);
+
+<!-- Create array of contents -->
+
+export const contents = scssReq.keys();
+export const results = contents.map(scssParser);
+
+<div>
+  {results.map((result) => {
+    return <Color variableName={result.declaration} color={result.red}></Color>;
+  })}
+</div>
