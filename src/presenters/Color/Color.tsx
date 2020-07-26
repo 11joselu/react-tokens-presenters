@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import Circle from '../../components/Circle/Circle';
+import Circle from '../../ui/Circle/Circle';
 
 type ColorProps = {
   color: string;
