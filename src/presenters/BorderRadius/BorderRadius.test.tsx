@@ -1,14 +1,27 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import BorderRadius from './BorderRadius';
 
 describe('BoderRadius', () => {
+  beforeEach(() => {
+    render(<BorderRadius value="30%" name="borderRadius" />);
+  });
   it('render given borderRadius', () => {
-    const { getByTestId } = render(<BorderRadius value="30%" />);
-
-    const borderredElement = getByTestId('box');
+    const borderredElement = screen.getByTestId('box');
     const styles = window.getComputedStyle(borderredElement);
 
     expect(styles['border-radius']).toBe('30%');
+  });
+
+  it('render variable name', () => {
+    const variableElement = screen.getByText('borderRadius');
+
+    expect(variableElement.textContent).toBe('borderRadius');
+  });
+
+  it('render variable value', () => {
+    const variableElement = screen.getByText('30%');
+
+    expect(variableElement.textContent).toBe('30%');
   });
 });

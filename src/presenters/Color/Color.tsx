@@ -2,18 +2,16 @@ import React, { FC } from 'react';
 import Circle from '../../ui/Circle/Circle';
 import Text from '../../ui/Text/Text';
 import Card from '../../ui/Card/Card';
+import { TokenDeclaration } from '../TokenDeclaration';
 
-type ColorProps = {
-  color: string;
-  variableName: string;
-};
+type ColorProps = TokenDeclaration;
 
-const Color: FC<ColorProps> = ({ color, variableName }: ColorProps) => {
+const Color: FC<ColorProps> = ({ value, name }: ColorProps) => {
   return (
     <Card>
-      <Circle backgroundColor={color} />
-      <Text>{variableName}</Text>
-      <Text isAlternative={true}>{color}</Text>
+      <Circle backgroundColor={value} />
+      <Text>{name}</Text>
+      <Text isAlternative={true}>{value}</Text>
     </Card>
   );
 };
