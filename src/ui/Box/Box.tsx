@@ -4,16 +4,21 @@ import styled from 'styled-components';
 type BlockProps = {
   borderRadius?: string;
   border?: string;
+  padding?: string;
+  width?: string;
+  height?: string;
 };
 
 const Box: FC<BlockProps> = styled.div.attrs({
   'data-testid': 'box',
 })`
-  border: ${(props: BlockProps) => props.border || '1px solid #2b2b2b'};
+  border: ${(props: BlockProps) => props.border || '1px solid #ff7300'};
   border-radius: ${(props: BlockProps) => props.borderRadius || 0};
-  width: 5rem;
-  height: 5rem;
+  width: ${(props: BlockProps) => props.width || '5rem'};
+  height: ${(props: BlockProps) => props.height || '5rem'};
   margin: 0 auto;
+  padding: ${(props: BlockProps) => props.padding || 0};
+  background-color: rgba(255, 152, 0, 0.5);
 `;
 
 export default Box;

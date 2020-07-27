@@ -1,0 +1,28 @@
+import { Meta, Props } from '@storybook/addon-docs/blocks';
+import Spacing from './Spacing';
+
+<Meta title="Presenters/Spacing" component={Spacing} />
+
+export const expectedResult = [
+  {
+    declaration: 'spacing',
+    value: '1rem',
+    token: 'Spacing',
+  },
+];
+
+# Spacing
+
+<div>
+  {expectedResult.map((result) => {
+    return (
+      <>
+        <Spacing name={result.declaration} value={result.value}></Spacing>
+      </>
+    );
+  })}
+</div>
+
+## Props
+
+<Props of={Spacing} />
