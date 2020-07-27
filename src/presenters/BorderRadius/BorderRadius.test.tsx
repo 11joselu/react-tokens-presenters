@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import BorderRadius from './BorderRadius';
 
-describe('BoderRadius', () => {
+describe('BorderRadius', () => {
   beforeEach(() => {
     render(<BorderRadius value="30%" name="borderRadius" />);
   });

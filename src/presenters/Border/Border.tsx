@@ -7,7 +7,7 @@ import { TokenDeclaration } from '../TokenDeclaration';
 
 type BorderProps = TokenDeclaration;
 
-const Color: FC<BorderProps> = ({ name, value }: BorderProps) => {
+const Border: FC<BorderProps> = ({ name, value }: BorderProps) => {
   return (
     <Card>
       <Box border={value}></Box>
@@ -17,4 +17,4 @@ const Color: FC<BorderProps> = ({ name, value }: BorderProps) => {
   );
 };
 
-export default Color;
+export default Border;

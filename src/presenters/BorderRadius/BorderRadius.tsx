@@ -7,7 +7,10 @@ import { TokenDeclaration } from '../TokenDeclaration';
 
 type BoderRadiusProps = TokenDeclaration;
 
-const Color: FC<BoderRadiusProps> = ({ name, value }: BoderRadiusProps) => {
+const BorderRadius: FC<BoderRadiusProps> = ({
+  name,
+  value,
+}: BoderRadiusProps) => {
   return (
     <Card>
       <Box borderRadius={value}></Box>
@@ -17,4 +20,4 @@ const Color: FC<BoderRadiusProps> = ({ name, value }: BoderRadiusProps) => {
   );
 };
 
-export default Color;
+export default BorderRadius;
