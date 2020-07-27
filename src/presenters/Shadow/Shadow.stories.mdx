@@ -1,0 +1,28 @@
+import { Meta, Props } from '@storybook/addon-docs/blocks';
+import Shadow from './Shadow';
+
+<Meta title="Presenters/Shadow" component={Shadow} />
+
+export const expectedResult = [
+  {
+    declaration: 'shadow',
+    value: '15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff',
+    token: 'Shadow',
+  },
+];
+
+# Shadow
+
+<div>
+  {expectedResult.map((result) => {
+    return (
+      <>
+        <Shadow name={result.declaration} value={result.value}></Shadow>
+      </>
+    );
+  })}
+</div>
+
+## Props
+
+<Props of={Shadow} />

@@ -11,7 +11,7 @@ describe('Opacity', () => {
     const OpacityredElement = screen.getByTestId('box');
     const styles = window.getComputedStyle(OpacityredElement);
 
-    expect(styles['opacity']).toBe('1px solid tomato');
+    expect(styles['opacity']).toBe('0.6');
   });
 
   it('render variable name', () => {
