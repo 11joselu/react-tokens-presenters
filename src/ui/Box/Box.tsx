@@ -10,8 +10,9 @@ const Box: FC<BlockProps> = styled.div.attrs({
 })`
   border: 1px solid #2b2b2b;
   border-radius: ${(props: BlockProps) => props.borderRadius || 0};
-  width: 120px;
-  height: 100px;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto;
 `;
 
 export default Box;
