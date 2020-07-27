@@ -1,27 +1,13 @@
 import { Meta, Props } from '@storybook/addon-docs/blocks';
 import BorderRadius from './BorderRadius';
+import { readTokensFromFile } from '../../utils/tokenReader';
 
 <Meta title="Presenters/BorderRadius" component={BorderRadius} />
-
-export const token = `
-     /**
-       * @tokens BorderRadius
-       */
-        $raidus: 5%;
-    `;
-
-export const expectedResult = [
-  {
-    declaration: 'radius',
-    value: '5%',
-    token: 'BorderRadius',
-  },
-];
 
 # BorderRadius
 
 <div>
-  {expectedResult.map((result) => {
+  {readTokensFromFile('BorderRadius').map((result) => {
     return (
       <>
         <BorderRadius

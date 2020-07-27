@@ -1,24 +1,18 @@
 import { Meta, Props } from '@storybook/addon-docs/blocks';
+import { readTokensFromFile } from '../../utils/tokenReader';
 import Spacing from './Spacing';
 
 <Meta title="Presenters/Spacing" component={Spacing} />
 
-export const expectedResult = [
-  {
-    declaration: 'spacing',
-    value: '1rem',
-    token: 'Spacing',
-  },
-];
-
 # Spacing
 
 <div>
-  {expectedResult.map((result) => {
+  {readTokensFromFile('Spacing').map((result) => {
     return (
-      <>
+      <div>
         <Spacing name={result.declaration} value={result.value}></Spacing>
-      </>
+        <br></br>
+      </div>
     );
   })}
 </div>

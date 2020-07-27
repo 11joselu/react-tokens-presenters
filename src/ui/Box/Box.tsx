@@ -22,7 +22,7 @@ const Box: FC<BlockProps> = styled.div.attrs({
   margin: 0 auto;
   padding: ${(props: BlockProps) => props.padding || 0};
   background-color: ${(props: BlockProps) =>
-    props.backgroundColor || 'rgba(255, 152, 0, 0.5)'};
+    props.backgroundColor || '#ffcb77'};
   opacity: ${(props: BlockProps) => props.opacity || 1};
   box-shadow: ${(props: BlockProps) => props.boxShadow || 'none'};
 `;

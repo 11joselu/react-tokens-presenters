@@ -35,7 +35,7 @@ npm i -S react-tokens-presenters
 
 Works well with [design-tokens-parser](https://github.com/11joselu/design-tokens-parser.git)
 
-See [demo](/demo) directory for examples
+See [demo](/demo) directory for examples or [presenters](src/presenters) preprocessors demos examples
 
 ## Presenters
 
