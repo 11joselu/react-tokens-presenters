@@ -1,24 +1,26 @@
 import { Meta, Props } from '@storybook/addon-docs/blocks';
-import BorderRadius from './BorderRadius';
 import { readTokensFromFile } from '../../utils/tokenReader';
+import BorderRadius from './BorderRadius';
+import Flex from '../../ui/Flex/Flex';
+import FlexItem from '../../ui/Flex/FlexItem';
 
 <Meta title="Presenters/BorderRadius" component={BorderRadius} />
 
 # BorderRadius
 
-<div>
+<Flex>
   {readTokensFromFile('BorderRadius').map((result) => {
     return (
-      <>
+      <FlexItem>
         <BorderRadius
           name={result.declaration}
           value={result.value}
         ></BorderRadius>
         <br></br>
-      </>
+      </FlexItem>
     );
   })}
-</div>
+</Flex>
 
 ## Props
 

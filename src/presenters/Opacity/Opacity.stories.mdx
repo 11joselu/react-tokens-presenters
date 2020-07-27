@@ -1,20 +1,22 @@
 import { Meta, Props } from '@storybook/addon-docs/blocks';
-import Opacity from './Opacity';
 import { readTokensFromFile } from '../../utils/tokenReader';
+import Opacity from './Opacity';
+import Flex from '../../ui/Flex/Flex';
+import FlexItem from '../../ui/Flex/FlexItem';
 
 <Meta title="Presenters/Opacity" component={Opacity} />
 
 # Opacity
 
-<div>
-  {readTokensFromFile('Opacity').map((result) => {
+<Flex>
+  {readTokensFromFile('Opacity').map((result, index) => {
     return (
-      <>
+      <FlexItem key={index}>
         <Opacity name={result.declaration} value={result.value}></Opacity>
-      </>
+      </FlexItem>
     );
   })}
-</div>
+</Flex>
 
 ## Props
 

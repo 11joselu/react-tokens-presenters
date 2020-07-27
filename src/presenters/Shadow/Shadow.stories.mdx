@@ -1,20 +1,22 @@
 import { Meta, Props } from '@storybook/addon-docs/blocks';
 import { readTokensFromFile } from '../../utils/tokenReader';
 import Shadow from './Shadow';
+import Flex from '../../ui/Flex/Flex';
+import FlexItem from '../../ui/Flex/FlexItem';
 
 <Meta title="Presenters/Shadow" component={Shadow} />
 
 # Shadow
 
-<div>
-  {readTokensFromFile('Shadow').map((result) => {
+<Flex>
+  {readTokensFromFile('Shadow').map((result, index) => {
     return (
-      <>
+      <FlexItem key={index}>
         <Shadow name={result.declaration} value={result.value}></Shadow>
-      </>
+      </FlexItem>
     );
   })}
-</div>
+</Flex>
 
 ## Props
 

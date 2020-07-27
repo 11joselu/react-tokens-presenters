@@ -1,21 +1,23 @@
 import { Meta, Props } from '@storybook/addon-docs/blocks';
-import Border from './Border';
 import { readTokensFromFile } from '../../utils/tokenReader';
+import Border from './Border';
+import Flex from '../../ui/Flex/Flex';
+import FlexItem from '../../ui/Flex/FlexItem';
 
 <Meta title="Presenters/Border" component={Border} />
 
 # Border
 
-<div>
+<Flex>
   {readTokensFromFile('Border').map((result, index) => {
     return (
-      <div key={index}>
+      <FlexItem key={index}>
         <Border name={result.declaration} value={result.value}></Border>
         <br></br>
-      </div>
+      </FlexItem>
     );
   })}
-</div>
+</Flex>
 
 ## Props
 
