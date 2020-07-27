@@ -1,7 +1,7 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 import Button from './Button';
-import { Color } from 'react-design-tokens-presenter';
-import { scssParser } from 'preprocessors-tokens-parser';
+import { Color } from 'react-tokens-presenters';
+import { scssParser } from 'design-tokens-parser';
 
 <Meta title="Presenters/Color" component={Color} />
 
@@ -17,6 +17,8 @@ Buttons are convenient tools when you need more traditional actions
 
 # CSS Properties
 
+The following section contains a brief overview of button CSS3 Properties.
+
 <!-- Read Button tokens -->
 
 export const scssReq = require.context(
@@ -29,6 +31,8 @@ export const scssReq = require.context(
 
 export const files = scssReq.keys();
 
+## Colors
+
 <div>
   {files
     .filter((filename) => filename.includes('Button'))
@@ -39,7 +43,10 @@ export const files = scssReq.keys();
     .flat()
     .map((result) => {
       return (
-        <Color variableName={result.declaration} color={result.value}></Color>
+        <div>
+          <Color variableName={result.declaration} color={result.value}></Color>
+          <br></br>
+        </div>
       );
     })}
 </div>
