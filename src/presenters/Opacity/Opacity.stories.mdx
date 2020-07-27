@@ -1,0 +1,28 @@
+import { Meta, Props } from '@storybook/addon-docs/blocks';
+import Opacity from './Opacity';
+
+<Meta title="Presenters/Opacity" component={Opacity} />
+
+export const expectedResult = [
+  {
+    declaration: 'Opacity',
+    value: '0.5',
+    token: 'Opacity',
+  },
+];
+
+# Opacity
+
+<div>
+  {expectedResult.map((result) => {
+    return (
+      <>
+        <Opacity name={result.declaration} value={result.value}></Opacity>
+      </>
+    );
+  })}
+</div>
+
+## Props
+
+<Props of={Opacity} />

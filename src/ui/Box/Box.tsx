@@ -7,6 +7,7 @@ type BlockProps = {
   padding?: string;
   width?: string;
   height?: string;
+  opacity?: string;
 };
 
 const Box: FC<BlockProps> = styled.div.attrs({
@@ -19,6 +20,7 @@ const Box: FC<BlockProps> = styled.div.attrs({
   margin: 0 auto;
   padding: ${(props: BlockProps) => props.padding || 0};
   background-color: rgba(255, 152, 0, 0.5);
+  opacity: ${(props: BlockProps) => props.opacity || 1};
 `;
 
 export default Box;
