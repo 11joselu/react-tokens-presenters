@@ -1,42 +1,32 @@
 import { Meta, Props } from '@storybook/addon-docs/blocks';
 import Color from './Color';
+import { scssParser } from 'design-tokens-parser';
 
 <Meta title="Presenters/Color" component={Color} />
-
-export const token = `
-     /**
-       * @tokens Color
-       */
-        $col-primary: #673ab7;
-        $col-secondary: #9c27b0;
-    `;
-
-export const expectedResult = [
-  {
-    declaration: 'col-primary',
-    value: '#673ab7',
-    token: 'Color',
-  },
-  {
-    declaration: 'col-secondary',
-    value: '#9c27b0',
-    token: 'Color',
-  },
-];
 
 # Color
 
 Convey meaning through color.
 
+export const scssReq = require.context(`!!raw-loader!./`, true, /tokens.scss$/);
+
+export const files = scssReq.keys();
+
+## Colors
+
 <div>
-  {expectedResult.map((result) => {
-    return (
-      <>
-        <Color name={result.declaration} value={result.value}></Color>
-        <br></br>
-      </>
-    );
-  })}
+  {files
+    .map((filename) => scssReq(filename).default)
+    .map(scssParser)
+    .flat()
+    .map((result, index) => {
+      return (
+        <div key={index}>
+          <Color name={result.declaration} value={result.value}></Color>
+          <br></br>
+        </div>
+      );
+    })}
 </div>
 
 ## Props

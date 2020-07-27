@@ -69,6 +69,7 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
+    "design-tokens-parser": "0.0.7",
     "styled-components": "^5.1.1"
   },
   "lint-staged": {
