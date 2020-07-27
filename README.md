@@ -15,11 +15,15 @@
   </a>
 </p>
 
-> List of presenter for design tokens system
+> List of presenter for design tokens
 
-### 🏠 [Homepage](https://github.com/11joselu/react-tokens-presenters.git#readme)
+<center>
+  <img src="https://raw.githubusercontent.com/11joselu/react-tokens-presenters/master/media/Button.png?token=ACCIMTC6L2VLJWRBPOHV2M27D3G4C" width="100%" />
+</center>
 
-### ✨ [Demo](https://react-design-tokens-presenter.netlify.app/)
+### [Homepage](https://github.com/11joselu/react-tokens-presenters.git#readme)
+
+### [Demo](https://react-design-tokens-presenter.netlify.app/)
 
 ## Install
 
@@ -51,7 +55,7 @@ npm run test
 - Twitter: [@11joselu](https://twitter.com/11joselu)
 - Github: [@11joselu](https://github.com/11joselu)
 
-## 🤝 Contributing
+## Contributing
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/11joselu/react-design-tokens-presenter/issues).
 
