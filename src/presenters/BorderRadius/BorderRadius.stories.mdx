@@ -1,0 +1,39 @@
+import { Meta, Props } from '@storybook/addon-docs/blocks';
+import BorderRadius from './BorderRadius';
+
+<Meta title="Presenters/BorderRadius" component={BorderRadius} />
+
+export const token = `
+     /**
+       * @tokens BorderRadius
+       */
+        $raidus: 5%;
+    `;
+
+export const expectedResult = [
+  {
+    declaration: 'radius',
+    value: '5%',
+    token: 'BorderRadius',
+  },
+];
+
+# BorderRadius
+
+<div>
+  {expectedResult.map((result) => {
+    return (
+      <>
+        <BorderRadius
+          variableName={result.declaration}
+          value={result.value}
+        ></BorderRadius>
+        <br></br>
+      </>
+    );
+  })}
+</div>
+
+## Props
+
+<Props of={BorderRadius} />
