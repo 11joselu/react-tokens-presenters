@@ -1,0 +1,28 @@
+import { Meta, Props } from '@storybook/addon-docs/blocks';
+import Border from './Border';
+
+<Meta title="Presenters/Border" component={Border} />
+
+export const expectedResult = [
+  {
+    declaration: 'border',
+    value: '1px solid #673ab7',
+    token: 'Border',
+  },
+];
+
+# Border
+
+<div>
+  {expectedResult.map((result) => {
+    return (
+      <>
+        <Border name={result.declaration} value={result.value}></Border>
+      </>
+    );
+  })}
+</div>
+
+## Props
+
+<Props of={Border} />
