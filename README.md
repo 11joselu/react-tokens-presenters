@@ -39,7 +39,7 @@ See [demo](/demo) directory for examples
 
 ## Presenters
 
-Presenters are used to render examples for your design tokens. [View all available presenters](https://react-design-tokens-presenter.netlify.app/)
+Presenters are used to render examples for your design tokens. [View availables presenters](https://react-design-tokens-presenter.netlify.app/)
 
 ## Run tests
 
@@ -54,6 +54,7 @@ npm run test
 - Website: https://twitter.com/11joselu
 - Twitter: [@11joselu](https://twitter.com/11joselu)
 - Github: [@11joselu](https://github.com/11joselu)
+- LinkedIn: [@Jose Cabrera](www.linkedin.com/in/jose-cabrera-8543b9b3)
 
 ## Contributing
 
