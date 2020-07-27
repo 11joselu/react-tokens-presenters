@@ -2,12 +2,11 @@ import React, { FC } from 'react';
 import Card from '../../ui/Card/Card';
 import Box from '../../ui/Box/Box';
 import Text from '../../ui/Text/Text';
-
 import { TokenDeclaration } from '../TokenDeclaration';
 
-type BorderProps = TokenDeclaration;
+type ShadowProps = TokenDeclaration;
 
-const Border: FC<BorderProps> = ({ name, value }: BorderProps) => {
+const Shadow: FC<ShadowProps> = ({ name, value }: ShadowProps) => {
   return (
     <Card>
       <Box boxShadow={value}></Box>
@@ -17,4 +16,4 @@ const Border: FC<BorderProps> = ({ name, value }: BorderProps) => {
   );
 };
 
-export default Border;
+export default Shadow;
