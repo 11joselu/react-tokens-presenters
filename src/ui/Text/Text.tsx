@@ -6,6 +6,7 @@ type TextProps = {
   isAlternative?: boolean;
   fontSize?: string;
   fontWeight?: string;
+  lineHeight?: string;
 };
 
 const Text: FC<TextProps> = styled.p`
@@ -13,6 +14,7 @@ const Text: FC<TextProps> = styled.p`
   color: ${(props: TextProps) => (props.isAlternative ? '#9d9e9e' : '#2b2b2b')};
   font-size: ${(props: TextProps) => props.fontSize || 'inherit'};
   font-weight: ${(props: TextProps) => props.fontWeight || 'inherit'};
+  line-height: ${(props: TextProps) => props.lineHeight || 'inherit'};
 `;
 
 export default Text;

@@ -1,0 +1,16 @@
+import { Meta, Props } from '@storybook/addon-docs/blocks';
+import { readTokensFromFile } from '../../utils/tokenReader';
+import LineHeight from './LineHeight';
+import TokenSummary from '../../TokensSummary/TokensSummary';
+
+<Meta title="Presenters/LineHeight" component={LineHeight} />
+
+# LineHeight
+
+<div>
+  {<TokenSummary tokens={readTokensFromFile('LineHeight')}></TokenSummary>}
+</div>
+
+## Props
+
+<Props of={LineHeight} />
