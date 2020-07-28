@@ -12,7 +12,6 @@ const Circle: FC<CircleProps> = styled.div.attrs({
   height: 50px;
   border-radius: 50%;
   background-color: ${(props: CircleProps) => props.backgroundColor};
-  margin: 0 auto;
 `;
 
 export default Circle;

@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { TokenDeclaration } from '../presenters/TokenDeclaration';
 import * as presenters from '../presenters';
+import Table from '../ui/Table/Table';
 
 type TokenResult = TokenDeclaration & {
   token: string;
@@ -14,23 +15,32 @@ const TokensSummary: FC<TokensSummaryProps> = ({
   tokens,
 }: TokensSummaryProps) => {
   return (
-    <>
-      {tokens.map((result, index) => {
-        const Component = presenters[result.token];
+    <Table>
+      <thead>
+        <tr>
+          <td>TOKEN NAME</td>
+          <td>PLATFORM VAR.</td>
+        </tr>
+      </thead>
+      <tbody>
+        {tokens.map(({ token, declaration, value }, index) => {
+          const Component = presenters[token];
 
-        if (!Component) {
-          throw new Error(`Presenter '${result.token}' does not exist`);
-        }
+          if (!Component) {
+            throw new Error(`Presenter '${token}' does not exist`);
+          }
 
-        return (
-          <Component
-            key={index}
-            declaration={result.declaration}
-            value={result.value}
-          />
-        );
-      })}
-    </>
+          return (
+            <tr key={index}>
+              <td>
+                <Component declaration={declaration} value={value} />
+              </td>
+              <td>{value}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </Table>
   );
 };
 

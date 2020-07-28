@@ -19,7 +19,6 @@ const Box: FC<BlockProps> = styled.div.attrs({
   border-radius: ${(props: BlockProps) => props.borderRadius || 0};
   width: ${(props: BlockProps) => props.width || '5rem'};
   height: ${(props: BlockProps) => props.height || '5rem'};
-  margin: 0 auto;
   padding: ${(props: BlockProps) => props.padding || 0};
   background-color: ${(props: BlockProps) =>
     props.backgroundColor || '#ffcb77'};
