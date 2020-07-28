@@ -37,6 +37,46 @@ Works well with [design-tokens-parser](https://github.com/11joselu/design-tokens
 
 See [demo](/demo) directory for examples or [presenters](src/presenters) preprocessors demos examples
 
+### Working with design-tokens-parser
+
+```javascript
+import { scssParser } from 'design-tokens-parser';
+import {TokenSumarry} from 'react-tokens-presenters';
+
+const scssReq = require.context(
+  `!!raw-loader!../<MY_PATH>`,
+  true,
+  /tokensFiles.scss$/
+);
+
+// We create and array of file path
+const files = scssReq.keys();
+const tokens = files
+      .map((filename) => scssReq(filename).default) // read file content
+      .map(scssParser) // parse file content and return a doube array of tokens
+      .flat() // flat double array into single array
+
+
+<TokenSumarry tokens={tokens}/>
+```
+
+In cases where you need a custom layout, [you have presenter](https://react-design-tokens-presenter.netlify.app/) to reuse them.
+
+```javascript
+import { scssParser } from 'design-tokens-parser';
+// We import Color
+import { Color } from 'react-tokens-presenters';
+
+const scssReq = ...
+
+// We create and array of file path
+const files = scssReq.keys();
+const tokens = ...
+
+tokens.map((token, index) => <Color {...token} key={index} />)
+<TokenSumarry tokens={tokens}/>
+```
+
 ## Presenters
 
 Presenters are used to render examples for your design tokens. [View availables presenters](https://react-design-tokens-presenter.netlify.app/)
