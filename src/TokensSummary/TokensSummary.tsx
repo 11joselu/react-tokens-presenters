@@ -24,8 +24,12 @@ type TokensSummaryProps = {
 const TokensSummary: FC<TokensSummaryProps> = ({
   tokens,
 }: TokensSummaryProps) => {
-  if (!Array.isArray(tokens) || !tokens.length) {
-    return <EmptyTokens>No tokens founds</EmptyTokens>;
+  if (!Array.isArray(tokens)) {
+    throw new Error(`Tokens should be array, received ${typeof tokens}`);
+  }
+
+  if (!tokens.length) {
+    return <EmptyTokens>No tokens found</EmptyTokens>;
   }
 
   return (
