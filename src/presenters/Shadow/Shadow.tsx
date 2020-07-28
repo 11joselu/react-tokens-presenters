@@ -6,11 +6,10 @@ import { TokenDeclaration } from '../TokenDeclaration';
 
 type ShadowProps = TokenDeclaration;
 
-const Shadow: FC<ShadowProps> = ({ declaration, value }: ShadowProps) => {
+const Shadow: FC<ShadowProps> = ({ value }: ShadowProps) => {
   return (
     <Card data-testid="shadow">
       <Box boxShadow={value}></Box>
-      <Text>{declaration}</Text>
       <Text isAlternative={true}>{value}</Text>
     </Card>
   );

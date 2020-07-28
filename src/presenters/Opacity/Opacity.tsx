@@ -7,11 +7,10 @@ import { TokenDeclaration } from '../TokenDeclaration';
 
 type OpacityProps = TokenDeclaration;
 
-const Opacity: FC<OpacityProps> = ({ declaration, value }: OpacityProps) => {
+const Opacity: FC<OpacityProps> = ({ value }: OpacityProps) => {
   return (
     <Card data-testid="opacity">
       <Box opacity={value}></Box>
-      <Text>{declaration}</Text>
       <Text isAlternative={true}>{value}</Text>
     </Card>
   );

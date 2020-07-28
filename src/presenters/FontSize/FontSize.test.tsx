@@ -14,12 +14,6 @@ describe('FontSize', () => {
     expect(styles['font-size']).toBe('20px');
   });
 
-  it('render variable name', () => {
-    const variableElement = screen.getByText('fontSize');
-
-    expect(variableElement.textContent).toBe('fontSize');
-  });
-
   it('render variable value', () => {
     const variableElement = screen.getByText('20px');
 

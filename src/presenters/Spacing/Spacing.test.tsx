@@ -14,12 +14,6 @@ describe('Spacing', () => {
     expect(styles['padding']).toBe('10px 10px 5px 3px');
   });
 
-  it('render variable name', () => {
-    const variableElement = screen.getByText('Spacing');
-
-    expect(variableElement.textContent).toBe('Spacing');
-  });
-
   it('render variable value', () => {
     const variableElement = screen.getByText('10px 10px 5px 3px');
 

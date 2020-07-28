@@ -2,6 +2,16 @@ import React, { FC } from 'react';
 import { TokenDeclaration } from '../presenters/TokenDeclaration';
 import * as presenters from '../presenters';
 import Table from '../ui/Table/Table';
+import styled from 'styled-components';
+
+const EmptyTokens = styled.div`
+  padding: 1rem;
+  background-color: #ececec;
+  text-align: center;
+  color: #707070;
+  border-radius: 4px;
+  margin: 1rem;
+`;
 
 type TokenResult = TokenDeclaration & {
   token: string;
@@ -14,12 +24,20 @@ type TokensSummaryProps = {
 const TokensSummary: FC<TokensSummaryProps> = ({
   tokens,
 }: TokensSummaryProps) => {
+  if (!Array.isArray(tokens) || !tokens.length) {
+    return <EmptyTokens>No tokens founds</EmptyTokens>;
+  }
+
   return (
     <Table>
       <thead>
         <tr>
-          <td>TOKEN NAME</td>
-          <td>PLATFORM VAR.</td>
+          <td>
+            <small>{tokens[0].token}</small> Tokens
+          </td>
+          <td>
+            <small>Aa</small> Platform var.
+          </td>
         </tr>
       </thead>
       <tbody>
@@ -33,9 +51,9 @@ const TokensSummary: FC<TokensSummaryProps> = ({
           return (
             <tr key={index}>
               <td>
-                <Component declaration={declaration} value={value} />
+                <Component value={value} />
               </td>
-              <td>{value}</td>
+              <td>{declaration}</td>
             </tr>
           );
         })}

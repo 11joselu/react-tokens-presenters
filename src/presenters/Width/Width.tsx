@@ -7,11 +7,10 @@ import { TokenDeclaration } from '../TokenDeclaration';
 
 type WidthProps = TokenDeclaration;
 
-const Width: FC<WidthProps> = ({ declaration, value }: WidthProps) => {
+const Width: FC<WidthProps> = ({ value }: WidthProps) => {
   return (
     <Card data-testid="WidthSampe">
       <Box width={value}></Box>
-      <Text>{declaration}</Text>
       <Text isAlternative={true}>{value}</Text>
     </Card>
   );

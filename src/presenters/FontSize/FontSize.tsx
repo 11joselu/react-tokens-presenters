@@ -6,13 +6,12 @@ import { TokenDeclaration } from '../TokenDeclaration';
 
 type FontSizeProps = TokenDeclaration;
 
-const FontSize: FC<FontSizeProps> = ({ declaration, value }: FontSizeProps) => {
+const FontSize: FC<FontSizeProps> = ({ value }: FontSizeProps) => {
   return (
     <Card data-testid="FontSize">
       <Text data-testid="fontSizeSample" fontSize={value}>
         Typograpy scale
       </Text>
-      <Text>{declaration}</Text>
       <Text isAlternative={true}>{value}</Text>
     </Card>
   );

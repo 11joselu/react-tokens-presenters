@@ -14,12 +14,6 @@ describe('Height', () => {
     expect(styles['height']).toBe('100px');
   });
 
-  it('render variable name', () => {
-    const variableElement = screen.getByText('heightVar');
-
-    expect(variableElement.textContent).toBe('heightVar');
-  });
-
   it('render variable value', () => {
     const variableElement = screen.getByText('100px');
 

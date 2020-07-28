@@ -19,14 +19,4 @@ describe('Color', () => {
 
     expect(styles['background-color']).toBe('red');
   });
-
-  it('render variable name', () => {
-    const { getByText } = render(
-      <Color value="red" declaration="col-primary" />
-    );
-
-    const variableElement = getByText('col-primary');
-
-    expect(variableElement.textContent).toBe('col-primary');
-  });
 });

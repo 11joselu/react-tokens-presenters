@@ -13,12 +13,6 @@ describe('BorderRadius', () => {
     expect(styles['border-radius']).toBe('30%');
   });
 
-  it('render variable name', () => {
-    const variableElement = screen.getByText('borderRadius');
-
-    expect(variableElement.textContent).toBe('borderRadius');
-  });
-
   it('render variable value', () => {
     const variableElement = screen.getByText('30%');
 

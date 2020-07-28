@@ -6,11 +6,10 @@ import { TokenDeclaration } from '../TokenDeclaration';
 
 type ColorProps = TokenDeclaration;
 
-const Color: FC<ColorProps> = ({ declaration, value }: ColorProps) => {
+const Color: FC<ColorProps> = ({ value }: ColorProps) => {
   return (
     <Card data-testid="color">
       <Circle backgroundColor={value} />
-      <Text>{declaration}</Text>
       <Text isAlternative={true}>{value}</Text>
     </Card>
   );

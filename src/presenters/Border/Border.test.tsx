@@ -14,12 +14,6 @@ describe('Border', () => {
     expect(styles['border']).toBe('1px solid tomato');
   });
 
-  it('render variable name', () => {
-    const variableElement = screen.getByText('border');
-
-    expect(variableElement.textContent).toBe('border');
-  });
-
   it('render variable value', () => {
     const variableElement = screen.getByText('1px solid tomato');
 

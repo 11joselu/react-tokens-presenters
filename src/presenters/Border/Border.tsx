@@ -7,11 +7,10 @@ import { TokenDeclaration } from '../TokenDeclaration';
 
 type BorderProps = TokenDeclaration;
 
-const Border: FC<BorderProps> = ({ declaration, value }: BorderProps) => {
+const Border: FC<BorderProps> = ({ value }: BorderProps) => {
   return (
     <Card data-testid="border">
       <Box border={value}></Box>
-      <Text>{declaration}</Text>
       <Text isAlternative={true}>{value}</Text>
     </Card>
   );

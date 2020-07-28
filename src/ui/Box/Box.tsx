@@ -15,13 +15,13 @@ type BlockProps = {
 const Box: FC<BlockProps> = styled.div.attrs({
   'data-testid': 'box',
 })`
-  border: ${(props: BlockProps) => props.border || '1px solid #ff7300'};
+  border: ${(props: BlockProps) => props.border || '1px solid #91556c'};
   border-radius: ${(props: BlockProps) => props.borderRadius || 0};
   width: ${(props: BlockProps) => props.width || '5rem'};
   height: ${(props: BlockProps) => props.height || '5rem'};
   padding: ${(props: BlockProps) => props.padding || 0};
   background-color: ${(props: BlockProps) =>
-    props.backgroundColor || '#ffcb77'};
+    props.backgroundColor || '#ea4c89'};
   opacity: ${(props: BlockProps) => props.opacity || 1};
   box-shadow: ${(props: BlockProps) => props.boxShadow || 'none'};
 `;

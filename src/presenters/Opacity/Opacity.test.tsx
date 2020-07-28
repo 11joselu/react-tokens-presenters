@@ -14,12 +14,6 @@ describe('Opacity', () => {
     expect(styles['opacity']).toBe('0.6');
   });
 
-  it('render variable name', () => {
-    const variableElement = screen.getByText('opacity');
-
-    expect(variableElement.textContent).toBe('opacity');
-  });
-
   it('render variable value', () => {
     const variableElement = screen.getByText('0.6');
 

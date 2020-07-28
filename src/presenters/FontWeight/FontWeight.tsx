@@ -6,16 +6,12 @@ import { TokenDeclaration } from '../TokenDeclaration';
 
 type FontWeightProps = TokenDeclaration;
 
-const FontWeight: FC<FontWeightProps> = ({
-  declaration,
-  value,
-}: FontWeightProps) => {
+const FontWeight: FC<FontWeightProps> = ({ value }: FontWeightProps) => {
   return (
     <Card data-testid="FontWeight">
       <Text data-testid="fontWeightSample" fontWeight={value}>
         Typograpy weight
       </Text>
-      <Text>{declaration}</Text>
       <Text isAlternative={true}>{value}</Text>
     </Card>
   );

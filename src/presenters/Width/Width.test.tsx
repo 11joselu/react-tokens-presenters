@@ -14,12 +14,6 @@ describe('Width', () => {
     expect(styles['width']).toBe('40px');
   });
 
-  it('render variable name', () => {
-    const variableElement = screen.getByText('WidthVar');
-
-    expect(variableElement.textContent).toBe('WidthVar');
-  });
-
   it('render variable value', () => {
     const variableElement = screen.getByText('40px');
 

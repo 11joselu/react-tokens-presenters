@@ -1,4 +1,4 @@
 export type TokenDeclaration = {
   declaration: string;
-  value: string;
+  value?: string;
 };

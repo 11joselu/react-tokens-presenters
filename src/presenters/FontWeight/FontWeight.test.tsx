@@ -14,12 +14,6 @@ describe('FontWeight', () => {
     expect(styles['font-weight']).toBe('bold');
   });
 
-  it('render variable name', () => {
-    const variableElement = screen.getByText('FontWeight');
-
-    expect(variableElement.textContent).toBe('FontWeight');
-  });
-
   it('render variable value', () => {
     const variableElement = screen.getByText('bold');
 

@@ -16,7 +16,15 @@ const Table: FC = styled.table`
 
   thead > tr {
     td {
-      border-bottom: 3px solid rgba(89, 130, 150, 0.3);
+      border-bottom: 3px solid rgba(229, 229, 229, 0.7);
+      font-weight: bold;
+      text-transform: uppercase;
+      small {
+        text-transform: initial;
+        color: #bebebe;
+        display: inline-block;
+        margin-right: 0.4rem;
+      }
     }
   }
 
