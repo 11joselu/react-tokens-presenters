@@ -4,7 +4,7 @@ import Border from './Border';
 
 describe('Border', () => {
   beforeEach(() => {
-    render(<Border value="1px solid tomato" name="border" />);
+    render(<Border value="1px solid tomato" declaration="border" />);
   });
 
   it('render given border', () => {

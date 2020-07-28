@@ -1,20 +1,21 @@
 import React, { FC } from 'react';
 import Card from '../../ui/Card/Card';
-import Box from '../../ui/Box/Box';
 import Text from '../../ui/Text/Text';
 
 import { TokenDeclaration } from '../TokenDeclaration';
 
-type OpacityProps = TokenDeclaration;
+type FontSizeProps = TokenDeclaration;
 
-const Opacity: FC<OpacityProps> = ({ declaration, value }: OpacityProps) => {
+const FontSize: FC<FontSizeProps> = ({ declaration, value }: FontSizeProps) => {
   return (
-    <Card data-testid="opacity">
-      <Box opacity={value}></Box>
+    <Card data-testid="FontSize">
+      <Text data-testid="fontSizeSample" fontSize={value}>
+        Typograpy scale
+      </Text>
       <Text>{declaration}</Text>
       <Text isAlternative={true}>{value}</Text>
     </Card>
   );
 };
 
-export default Opacity;
+export default FontSize;

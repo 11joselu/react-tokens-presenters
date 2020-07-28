@@ -4,7 +4,7 @@ import Spacing from './Spacing';
 
 describe('Spacing', () => {
   beforeEach(() => {
-    render(<Spacing value="10px 10px 5px 3px" name="Spacing" />);
+    render(<Spacing value="10px 10px 5px 3px" declaration="Spacing" />);
   });
 
   it('render given Spacing', () => {

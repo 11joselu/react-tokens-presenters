@@ -4,7 +4,7 @@ import Shadow from './Shadow';
 
 describe('Shadow', () => {
   beforeEach(() => {
-    render(<Shadow value="15px 15px 27px #e1e1e3" name="boxShadow" />);
+    render(<Shadow value="15px 15px 27px #e1e1e3" declaration="boxShadow" />);
   });
 
   it('render given Shadow', () => {

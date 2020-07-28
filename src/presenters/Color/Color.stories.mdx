@@ -16,7 +16,7 @@ Convey meaning through color.
   {readTokensFromFile('Color').map((result, index) => {
     return (
       <FlexItem key={index}>
-        <Color name={result.declaration} value={result.value}></Color>
+        <Color declaration={result.declaration} value={result.value}></Color>
         <br></br>
       </FlexItem>
     );

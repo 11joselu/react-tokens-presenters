@@ -18,7 +18,7 @@ describe('TokensSummary', () => {
     const tokens = [
       {
         token: 'unknown',
-        name: 'unknown',
+        declaration: 'unknown',
         value: '',
       },
     ];
@@ -32,7 +32,7 @@ describe('TokensSummary', () => {
     const tokens = [
       {
         token: 'Color',
-        name: 'varColor',
+        declaration: 'varColor',
         value: 'tomato',
       },
     ];
@@ -47,13 +47,13 @@ describe('TokensSummary', () => {
     const tokens = [
       {
         token: 'Color',
-        name: 'varColor',
+        declaration: 'varColor',
         value: 'tomato',
       },
 
       {
         token: 'Border',
-        name: 'borderVar',
+        declaration: 'borderVar',
         value: '1px solid red',
       },
     ];

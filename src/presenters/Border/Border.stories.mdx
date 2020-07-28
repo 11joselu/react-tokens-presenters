@@ -9,13 +9,7 @@ import TokenSummary from '../../TokensSummary/TokensSummary';
 
 # Border
 
-<div>
-  {
-    <TokenResultsSummary
-      tokenResults={readTokensFromFile('Border')}
-    ></TokenResultsSummary>
-  }
-</div>
+<div>{<TokenSummary tokens={readTokensFromFile('Border')}></TokenSummary>}</div>
 
 ## Props
 

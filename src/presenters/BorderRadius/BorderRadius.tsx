@@ -8,13 +8,13 @@ import { TokenDeclaration } from '../TokenDeclaration';
 type BoderRadiusProps = TokenDeclaration;
 
 const BorderRadius: FC<BoderRadiusProps> = ({
-  name,
+  declaration,
   value,
 }: BoderRadiusProps) => {
   return (
     <Card data-testid="borderRadius">
       <Box borderRadius={value} backgroundColor="transparent"></Box>
-      <Text>{name}</Text>
+      <Text>{declaration}</Text>
       <Text isAlternative={true}>{value}</Text>
     </Card>
   );

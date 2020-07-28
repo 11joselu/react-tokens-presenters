@@ -8,11 +8,11 @@ import Box from '../../ui/Box/Box';
 
 type SpacingProps = TokenDeclaration;
 
-const Spacing: FC<SpacingProps> = ({ name, value }: SpacingProps) => {
+const Spacing: FC<SpacingProps> = ({ declaration, value }: SpacingProps) => {
   return (
     <Card data-testid="spacing">
       <Box padding={value} width={value} height={value}></Box>
-      <Text>{name}</Text>
+      <Text>{declaration}</Text>
       <Text isAlternative={true}>{value}</Text>
     </Card>
   );

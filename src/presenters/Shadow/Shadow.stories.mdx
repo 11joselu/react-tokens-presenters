@@ -12,7 +12,7 @@ import FlexItem from '../../ui/Flex/FlexItem';
   {readTokensFromFile('Shadow').map((result, index) => {
     return (
       <FlexItem key={index}>
-        <Shadow name={result.declaration} value={result.value}></Shadow>
+        <Shadow declaration={result.declaration} value={result.value}></Shadow>
       </FlexItem>
     );
   })}

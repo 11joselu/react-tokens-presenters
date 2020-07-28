@@ -4,7 +4,7 @@ import Color from './Color';
 
 describe('Color', () => {
   it('render given color', () => {
-    const { getByText } = render(<Color value="blue" name="myVar" />);
+    const { getByText } = render(<Color value="blue" declaration="myVar" />);
 
     const element = getByText('blue');
 
@@ -12,7 +12,7 @@ describe('Color', () => {
   });
 
   it('render circle color sample', () => {
-    const { getByTestId } = render(<Color value="red" name="myVar" />);
+    const { getByTestId } = render(<Color value="red" declaration="myVar" />);
 
     const circleElement = getByTestId('circle');
     const styles = window.getComputedStyle(circleElement);
@@ -21,7 +21,9 @@ describe('Color', () => {
   });
 
   it('render variable name', () => {
-    const { getByText } = render(<Color value="red" name="col-primary" />);
+    const { getByText } = render(
+      <Color value="red" declaration="col-primary" />
+    );
 
     const variableElement = getByText('col-primary');
 

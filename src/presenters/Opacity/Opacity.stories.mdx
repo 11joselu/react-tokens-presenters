@@ -12,7 +12,10 @@ import FlexItem from '../../ui/Flex/FlexItem';
   {readTokensFromFile('Opacity').map((result, index) => {
     return (
       <FlexItem key={index}>
-        <Opacity name={result.declaration} value={result.value}></Opacity>
+        <Opacity
+          declaration={result.declaration}
+          value={result.value}
+        ></Opacity>
       </FlexItem>
     );
   })}

@@ -10,7 +10,10 @@ import Spacing from './Spacing';
   {readTokensFromFile('Spacing').map((result) => {
     return (
       <div>
-        <Spacing name={result.declaration} value={result.value}></Spacing>
+        <Spacing
+          declaration={result.declaration}
+          value={result.value}
+        ></Spacing>
         <br></br>
       </div>
     );
