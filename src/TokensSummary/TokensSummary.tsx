@@ -32,9 +32,7 @@ const TokensSummary: FC<TokensSummaryProps> = ({
     <Table>
       <thead>
         <tr>
-          <td>
-            <small>{tokens[0].token}</small> Tokens
-          </td>
+          <td>Tokens</td>
           <td>
             <small>Aa</small> Platform var.
           </td>
