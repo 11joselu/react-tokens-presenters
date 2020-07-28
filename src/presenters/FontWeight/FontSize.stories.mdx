@@ -1,0 +1,16 @@
+import { Meta, Props } from '@storybook/addon-docs/blocks';
+import { readTokensFromFile } from '../../utils/tokenReader';
+import FontWeight from './FontWeight';
+import TokenSummary from '../../TokensSummary/TokensSummary';
+
+<Meta title="Presenters/FontWeight" component={FontWeight} />
+
+# FontWeight
+
+<div>
+  {<TokenSummary tokens={readTokensFromFile('FontWeight')}></TokenSummary>}
+</div>
+
+## Props
+
+<Props of={FontWeight} />

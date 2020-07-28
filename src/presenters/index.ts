@@ -5,5 +5,15 @@ import Opacity from './Opacity/Opacity';
 import Shadow from './Shadow/Shadow';
 import Spacing from './Spacing/Spacing';
 import FontSize from './FontSize/FontSize';
+import FontWeight from './FontWeight/FontWeight';
 
-export { Color, Border, BorderRadius, Opacity, Shadow, Spacing, FontSize };
+export {
+  Color,
+  Border,
+  BorderRadius,
+  Opacity,
+  Shadow,
+  Spacing,
+  FontSize,
+  FontWeight,
+};
