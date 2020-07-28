@@ -23,10 +23,11 @@ const TokensSummary: FC<TokensSummaryProps> = ({
         }
 
         return (
-          <div>
-            {index === 0 ? <h1>{result.token}</h1> : null}
-            <Component declaration={result.declaration} value={result.value} />
-          </div>
+          <Component
+            key={index}
+            declaration={result.declaration}
+            value={result.value}
+          />
         );
       })}
     </>
