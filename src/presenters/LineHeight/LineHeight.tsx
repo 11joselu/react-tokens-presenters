@@ -4,16 +4,16 @@ import Text from '../../ui/Text/Text';
 
 import { TokenDeclaration } from '../TokenDeclaration';
 
-type FontWeightProps = TokenDeclaration;
+type LineHeightProps = TokenDeclaration;
 
-const FontWeight: FC<FontWeightProps> = ({
+const LineHeight: FC<LineHeightProps> = ({
   declaration,
   value,
-}: FontWeightProps) => {
+}: LineHeightProps) => {
   return (
-    <Card data-testid="LineHeightSample">
+    <Card data-testid="lineHeight">
       <Text
-        data-testid="fontWeightSample"
+        data-testid="LineHeightSample"
         lineHeight={value}
         isAlternative={true}
       >
@@ -27,4 +27,4 @@ const FontWeight: FC<FontWeightProps> = ({
   );
 };
 
-export default FontWeight;
+export default LineHeight;

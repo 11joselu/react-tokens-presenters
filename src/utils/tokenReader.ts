@@ -14,7 +14,7 @@ export const readTokensFromFile = (componentName: string) => {
   return (
     files
       //  We need to filter all available files by the one that really interests us
-      .filter((filename) => filename.includes(`${componentName}/`))
+      .filter((filename) => filename.includes(`/${componentName}/`))
       .map((filename) => scssReq(filename).default)
       .map(scssParser)
       .flat()

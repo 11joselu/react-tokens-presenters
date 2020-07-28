@@ -7,6 +7,8 @@ import Spacing from './Spacing/Spacing';
 import FontSize from './FontSize/FontSize';
 import FontWeight from './FontWeight/FontWeight';
 import LineHeight from './LineHeight/LineHeight';
+import Height from './Height/Height';
+import Width from './Width/Width';
 
 export {
   Color,
@@ -18,4 +20,6 @@ export {
   FontSize,
   FontWeight,
   LineHeight,
+  Height,
+  Width,
 };

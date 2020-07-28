@@ -1,0 +1,14 @@
+import { Meta, Props } from '@storybook/addon-docs/blocks';
+import { readTokensFromFile } from '../../utils/tokenReader';
+import Width from './Width';
+import TokenSummary from '../../TokensSummary/TokensSummary';
+
+<Meta title="Presenters/Width" component={Width} />
+
+# Width
+
+<div>{<TokenSummary tokens={readTokensFromFile('Width')}></TokenSummary>}</div>
+
+## Props
+
+<Props of={Width} />
