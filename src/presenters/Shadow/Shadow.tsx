@@ -8,7 +8,7 @@ type ShadowProps = TokenDeclaration;
 
 const Shadow: FC<ShadowProps> = ({ name, value }: ShadowProps) => {
   return (
-    <Card>
+    <Card data-testId="shadow">
       <Box boxShadow={value}></Box>
       <Text>{name}</Text>
       <Text isAlternative={true}>{value}</Text>

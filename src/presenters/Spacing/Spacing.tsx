@@ -10,7 +10,7 @@ type SpacingProps = TokenDeclaration;
 
 const Spacing: FC<SpacingProps> = ({ name, value }: SpacingProps) => {
   return (
-    <Card>
+    <Card data-testId="spacing">
       <Box padding={value} width={value} height={value}></Box>
       <Text>{name}</Text>
       <Text isAlternative={true}>{value}</Text>

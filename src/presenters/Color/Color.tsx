@@ -8,7 +8,7 @@ type ColorProps = TokenDeclaration;
 
 const Color: FC<ColorProps> = ({ value, name }: ColorProps) => {
   return (
-    <Card>
+    <Card data-testId="color">
       <Circle backgroundColor={value} />
       <Text>{name}</Text>
       <Text isAlternative={true}>{value}</Text>

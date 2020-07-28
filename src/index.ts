@@ -1,3 +1,4 @@
-import Color from './presenters/Color/Color';
+import TokensSummary from './TokensSummary/TokensSummary';
 
-export { Color };
+export * from './presenters';
+export { TokensSummary };

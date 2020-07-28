@@ -3,21 +3,19 @@ import { readTokensFromFile } from '../../utils/tokenReader';
 import Border from './Border';
 import Flex from '../../ui/Flex/Flex';
 import FlexItem from '../../ui/Flex/FlexItem';
+import TokenResultsSummary from '../../DesignTokensParserSummary/TokenResultsSummary';
 
 <Meta title="Presenters/Border" component={Border} />
 
 # Border
 
-<Flex>
-  {readTokensFromFile('Border').map((result, index) => {
-    return (
-      <FlexItem key={index}>
-        <Border name={result.declaration} value={result.value}></Border>
-        <br></br>
-      </FlexItem>
-    );
-  })}
-</Flex>
+<div>
+  {
+    <TokenResultsSummary
+      tokenResults={readTokensFromFile('Border')}
+    ></TokenResultsSummary>
+  }
+</div>
 
 ## Props
 

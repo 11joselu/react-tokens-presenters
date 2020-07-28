@@ -9,7 +9,7 @@ type OpacityProps = TokenDeclaration;
 
 const Opacity: FC<OpacityProps> = ({ name, value }: OpacityProps) => {
   return (
-    <Card>
+    <Card data-testId="opacity">
       <Box opacity={value}></Box>
       <Text>{name}</Text>
       <Text isAlternative={true}>{value}</Text>
