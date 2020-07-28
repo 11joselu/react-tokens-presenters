@@ -14,7 +14,7 @@ describe('Color', () => {
   it('render circle color sample', () => {
     const { getByTestId } = render(<Color value="red" declaration="myVar" />);
 
-    const circleElement = getByTestId('circle');
+    const circleElement = getByTestId('box');
     const styles = window.getComputedStyle(circleElement);
 
     expect(styles['background-color']).toBe('red');
