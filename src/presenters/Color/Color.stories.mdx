@@ -1,8 +1,7 @@
 import { Meta, Props } from '@storybook/addon-docs/blocks';
 import Color from './Color';
 import { readTokensFromFile } from '../../utils/tokenReader.ts';
-import Flex from '../../ui/Flex/Flex';
-import FlexItem from '../../ui/Flex/FlexItem';
+import TokenSummary from '../../TokensSummary/TokensSummary';
 
 <Meta title="Presenters/Color" component={Color} />
 
@@ -12,16 +11,7 @@ Convey meaning through color.
 
 ## Colors
 
-<Flex>
-  {readTokensFromFile('Color').map((result, index) => {
-    return (
-      <FlexItem key={index}>
-        <Color declaration={result.declaration} value={result.value}></Color>
-        <br></br>
-      </FlexItem>
-    );
-  })}
-</Flex>
+<div>{<TokenSummary tokens={readTokensFromFile('Color')}></TokenSummary>}</div>
 
 ## Props
 

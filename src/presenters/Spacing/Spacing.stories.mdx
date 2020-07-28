@@ -1,23 +1,14 @@
 import { Meta, Props } from '@storybook/addon-docs/blocks';
 import { readTokensFromFile } from '../../utils/tokenReader';
 import Spacing from './Spacing';
+import TokenSummary from '../../TokensSummary/TokensSummary';
 
 <Meta title="Presenters/Spacing" component={Spacing} />
 
 # Spacing
 
 <div>
-  {readTokensFromFile('Spacing').map((result) => {
-    return (
-      <div>
-        <Spacing
-          declaration={result.declaration}
-          value={result.value}
-        ></Spacing>
-        <br></br>
-      </div>
-    );
-  })}
+  {<TokenSummary tokens={readTokensFromFile('Spacing')}></TokenSummary>}
 </div>
 
 ## Props
