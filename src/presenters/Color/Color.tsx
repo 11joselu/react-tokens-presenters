@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import Circle from '../../ui/Circle/Circle';
+import Box from '../../ui/Box/Box';
 import Text from '../../ui/Text/Text';
 import Card from '../../ui/Card/Card';
 import { TokenDeclaration } from '../TokenDeclaration';
@@ -9,7 +9,7 @@ type ColorProps = TokenDeclaration;
 const Color: FC<ColorProps> = ({ value }: ColorProps) => {
   return (
     <Card data-testid="color">
-      <Circle backgroundColor={value} />
+      <Box backgroundColor={value} border="none" />
       <Text isAlternative={true}>{value}</Text>
     </Card>
   );

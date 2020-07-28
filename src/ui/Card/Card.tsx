@@ -6,8 +6,19 @@ const Card: FC = styled.div`
   border-radius: 0.5rem;
   background-color: #fff;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   > *:first-child {
     margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 600) {
+    flex-direction: column;
+
+    > *:first-child {
+      margin-bottom: 0;
+    }
   }
 `;
 
