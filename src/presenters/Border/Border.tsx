@@ -9,7 +9,7 @@ type BorderProps = TokenDeclaration;
 
 const Border: FC<BorderProps> = ({ name, value }: BorderProps) => {
   return (
-    <Card data-testId="border">
+    <Card data-testid="border">
       <Box border={value}></Box>
       <Text>{name}</Text>
       <Text isAlternative={true}>{value}</Text>

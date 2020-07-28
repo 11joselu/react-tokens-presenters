@@ -12,7 +12,7 @@ const BorderRadius: FC<BoderRadiusProps> = ({
   value,
 }: BoderRadiusProps) => {
   return (
-    <Card data-testId="borderRadius">
+    <Card data-testid="borderRadius">
       <Box borderRadius={value} backgroundColor="transparent"></Box>
       <Text>{name}</Text>
       <Text isAlternative={true}>{value}</Text>
