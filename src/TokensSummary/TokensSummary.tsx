@@ -38,7 +38,7 @@ const TokensSummary: FC<TokensSummaryProps> = ({
           <thead>
             <tr>
               <td>
-                <small>{tokenName}</small> Tokens
+                Tokens for <small>{tokenName}</small>
               </td>
               <td>
                 <small>Aa</small> Platform var.
