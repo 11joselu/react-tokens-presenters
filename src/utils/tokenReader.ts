@@ -2,11 +2,7 @@ import { scssParser } from 'design-tokens-parser';
 
 // Since require.context only works in compilation process
 // we need to read everything related to the presenters folder
-const scssReq = require.context(
-  `!!raw-loader!../presenters`,
-  true,
-  /tokens.scss$/
-);
+const scssReq = require.context(`!!raw-loader!../`, true, /tokens.scss$/);
 
 const files = scssReq.keys();
 
