@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import Card from '../../ui/Card/Card';
 import Text from '../../ui/Text/Text';
 
-import { TokenDeclaration } from '../TokenDeclaration';
+import { Token } from '../TokenDeclaration';
 
-type LineHeightProps = TokenDeclaration;
+type LineHeightProps = Token;
 
 const LineHeight: FC<LineHeightProps> = ({ value }: LineHeightProps) => {
   return (

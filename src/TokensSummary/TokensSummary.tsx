@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
-import { TokenDeclaration } from '../presenters/TokenDeclaration';
+import { Token } from '../presenters/TokenDeclaration';
 import * as presenters from '../presenters';
 import Table from '../ui/Table/Table';
 import styled from 'styled-components';
+import { groupByTokenName } from './groupByTokenName';
 
 const EmptyTokens = styled.div`
   padding: 1rem;
@@ -13,12 +14,8 @@ const EmptyTokens = styled.div`
   margin: 1rem;
 `;
 
-type TokenResult = TokenDeclaration & {
-  token: string;
-};
-
 type TokensSummaryProps = {
-  tokens: TokenResult[];
+  tokens: Token[];
 };
 
 const TokensSummary: FC<TokensSummaryProps> = ({
@@ -32,36 +29,46 @@ const TokensSummary: FC<TokensSummaryProps> = ({
     return <EmptyTokens>No tokens found</EmptyTokens>;
   }
 
-  return (
-    <Table>
-      <thead>
-        <tr>
-          <td>Tokens</td>
-          <td>
-            <small>Aa</small> Platform var.
-          </td>
-        </tr>
-      </thead>
-      <tbody>
-        {tokens.map(({ token, declaration, value }, index) => {
-          const Component = presenters[token];
+  const group = groupByTokenName(tokens);
 
-          if (!Component) {
-            throw new Error(`Presenter '${token}' does not exist`);
-          }
-
-          return (
-            <tr key={index}>
+  const tokenTables = Object.entries(group).map(
+    ([tokenName, tokenList], index) => {
+      return (
+        <Table data-testid="tableTokens" key={index}>
+          <thead>
+            <tr>
               <td>
-                <Component value={value} />
+                <small>{tokenName}</small> Tokens
               </td>
-              <td>{declaration}</td>
+              <td>
+                <small>Aa</small> Platform var.
+              </td>
             </tr>
-          );
-        })}
-      </tbody>
-    </Table>
+          </thead>
+          <tbody>
+            {tokenList.map(({ token, declaration, value }, index) => {
+              const Component = presenters[token];
+
+              if (!Component) {
+                throw new Error(`Presenter '${token}' does not exist`);
+              }
+
+              return (
+                <tr key={index}>
+                  <td>
+                    <Component value={value} />
+                  </td>
+                  <td data-testid="declaration">{declaration}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </Table>
+      );
+    }
   );
+
+  return <>{tokenTables}</>;
 };
 
 export default TokensSummary;

@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import Card from '../../ui/Card/Card';
 import Text from '../../ui/Text/Text';
 
-import { TokenDeclaration } from '../TokenDeclaration';
+import { Token } from '../TokenDeclaration';
 
-type FontWeightProps = TokenDeclaration;
+type FontWeightProps = Token;
 
 const FontWeight: FC<FontWeightProps> = ({ value }: FontWeightProps) => {
   return (

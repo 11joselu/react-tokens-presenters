@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import Box from '../../ui/Box/Box';
 import Text from '../../ui/Text/Text';
 import Card from '../../ui/Card/Card';
-import { TokenDeclaration } from '../TokenDeclaration';
+import { Token } from '../TokenDeclaration';
 
-type ColorProps = TokenDeclaration;
+type ColorProps = Token;
 
 const Color: FC<ColorProps> = ({ value }: ColorProps) => {
   return (

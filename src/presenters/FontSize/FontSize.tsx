@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import Card from '../../ui/Card/Card';
 import Text from '../../ui/Text/Text';
 
-import { TokenDeclaration } from '../TokenDeclaration';
+import { Token } from '../TokenDeclaration';
 
-type FontSizeProps = TokenDeclaration;
+type FontSizeProps = Token;
 
 const FontSize: FC<FontSizeProps> = ({ value }: FontSizeProps) => {
   return (

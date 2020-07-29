@@ -3,9 +3,9 @@ import Card from '../../ui/Card/Card';
 import Box from '../../ui/Box/Box';
 import Text from '../../ui/Text/Text';
 
-import { TokenDeclaration } from '../TokenDeclaration';
+import { Token } from '../TokenDeclaration';
 
-type OpacityProps = TokenDeclaration;
+type OpacityProps = Token;
 
 const Opacity: FC<OpacityProps> = ({ value }: OpacityProps) => {
   return (

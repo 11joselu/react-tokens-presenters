@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 import Card from '../../ui/Card/Card';
 import Text from '../../ui/Text/Text';
-import { TokenDeclaration } from '../TokenDeclaration';
+import { Token } from '../TokenDeclaration';
 import Box from '../../ui/Box/Box';
 
-type SpacingProps = TokenDeclaration;
+type SpacingProps = Token;
 
 const Spacing: FC<SpacingProps> = ({ value }: SpacingProps) => {
   return (
