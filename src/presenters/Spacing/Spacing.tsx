@@ -6,13 +6,13 @@ import Text from '../../ui/Text/Text';
 import { Token } from '../TokenDeclaration';
 import Box from '../../ui/Box/Box';
 
-type SpacingProps = Token;
+type SpacingProps = { token: Token };
 
-const Spacing: FC<SpacingProps> = ({ value }: SpacingProps) => {
+const Spacing: FC<SpacingProps> = ({ token }: SpacingProps) => {
   return (
     <Card data-testid="spacing">
-      <Box padding={value} width={value} height={value}></Box>
-      <Text isAlternative={true}>{value}</Text>
+      <Box padding={token.value} width={token.value} height={token.value}></Box>
+      <Text isAlternative={true}>{token.value}</Text>
     </Card>
   );
 };

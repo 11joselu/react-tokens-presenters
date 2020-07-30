@@ -5,13 +5,13 @@ import Text from '../../ui/Text/Text';
 
 import { Token } from '../TokenDeclaration';
 
-type OpacityProps = Token;
+type OpacityProps = { token: Token };
 
-const Opacity: FC<OpacityProps> = ({ value }: OpacityProps) => {
+const Opacity: FC<OpacityProps> = ({ token }: OpacityProps) => {
   return (
     <Card data-testid="opacity">
-      <Box opacity={value}></Box>
-      <Text isAlternative={true}>{value}</Text>
+      <Box opacity={token.value}></Box>
+      <Text isAlternative={true}>{token.value}</Text>
     </Card>
   );
 };

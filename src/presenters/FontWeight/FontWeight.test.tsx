@@ -4,7 +4,11 @@ import FontWeight from './FontWeight';
 
 describe('FontWeight', () => {
   beforeEach(() => {
-    render(<FontWeight declaration="FontWeight" value="bold" />);
+    const token = {
+      declaration: 'FontWeight',
+      value: 'bold',
+    };
+    render(<FontWeight token={token} />);
   });
 
   it('render given FontWeight', () => {

@@ -1,22 +1,26 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Color from './Color';
 
 describe('Color', () => {
-  it('render given color', () => {
-    const { getByText } = render(<Color value="blue" declaration="myVar" />);
+  beforeEach(() => {
+    const token = {
+      value: 'blue',
+      declaration: 'myVar',
+    };
+    render(<Color token={token} />);
+  });
 
-    const element = getByText('blue');
+  it('render given color', () => {
+    const element = screen.getByText('blue');
 
     expect(element.textContent).toBe('blue');
   });
 
   it('render circle color sample', () => {
-    const { getByTestId } = render(<Color value="red" declaration="myVar" />);
-
-    const circleElement = getByTestId('box');
+    const circleElement = screen.getByTestId('box');
     const styles = window.getComputedStyle(circleElement);
 
-    expect(styles['background-color']).toBe('red');
+    expect(styles['background-color']).toBe('blue');
   });
 });

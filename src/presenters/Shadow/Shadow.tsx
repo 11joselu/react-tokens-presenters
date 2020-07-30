@@ -4,13 +4,13 @@ import Box from '../../ui/Box/Box';
 import Text from '../../ui/Text/Text';
 import { Token } from '../TokenDeclaration';
 
-type ShadowProps = Token;
+type ShadowProps = { token: Token };
 
-const Shadow: FC<ShadowProps> = ({ value }: ShadowProps) => {
+const Shadow: FC<ShadowProps> = ({ token }: ShadowProps) => {
   return (
     <Card data-testid="shadow">
-      <Box boxShadow={value}></Box>
-      <Text isAlternative={true}>{value}</Text>
+      <Box boxShadow={token.value}></Box>
+      <Text isAlternative={true}>{token.value}</Text>
     </Card>
   );
 };

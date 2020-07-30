@@ -15,7 +15,7 @@ type BlockProps = {
 const Box: FC<BlockProps> = styled.div.attrs({
   'data-testid': 'box',
 })`
-  border: ${(props: BlockProps) => props.border || '1px solid #91556c'};
+  border: ${(props: BlockProps) => props.border || 'none'};
   border-radius: ${(props: BlockProps) => props.borderRadius || 0};
   width: ${(props: BlockProps) => props.width || '5rem'};
   height: ${(props: BlockProps) => props.height || '5rem'};

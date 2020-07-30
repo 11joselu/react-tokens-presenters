@@ -5,13 +5,13 @@ import Text from '../../ui/Text/Text';
 
 import { Token } from '../TokenDeclaration';
 
-type BorderProps = Token;
+type BorderProps = { token: Token };
 
-const Border: FC<BorderProps> = ({ value }: BorderProps) => {
+const Border: FC<BorderProps> = ({ token }: BorderProps) => {
   return (
     <Card data-testid="border">
-      <Box border={value}></Box>
-      <Text isAlternative={true}>{value}</Text>
+      <Box border={token.value} backgroundColor="transparent"></Box>
+      <Text isAlternative={true}>{token.value}</Text>
     </Card>
   );
 };

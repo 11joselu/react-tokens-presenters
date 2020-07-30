@@ -4,7 +4,11 @@ import LineHeight from './LineHeight';
 
 describe('LineHeight', () => {
   beforeEach(() => {
-    render(<LineHeight declaration="LineHeight" value="1.4rem" />);
+    const token = {
+      value: '1.4rem',
+      declaration: 'LineHeight',
+    };
+    render(<LineHeight token={token} />);
   });
 
   it('render given LineHeight', () => {

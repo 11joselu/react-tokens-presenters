@@ -5,13 +5,13 @@ import Text from '../../ui/Text/Text';
 
 import { Token } from '../TokenDeclaration';
 
-type HeightProps = Token;
+type HeightProps = { token: Token };
 
-const Height: FC<HeightProps> = ({ value }: HeightProps) => {
+const Height: FC<HeightProps> = ({ token }: HeightProps) => {
   return (
     <Card data-testid="HeightSampe">
-      <Box height={value}></Box>
-      <Text isAlternative={true}>{value}</Text>
+      <Box height={token.value}></Box>
+      <Text isAlternative={true}>{token.value}</Text>
     </Card>
   );
 };

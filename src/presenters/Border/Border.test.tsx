@@ -4,12 +4,16 @@ import Border from './Border';
 
 describe('Border', () => {
   beforeEach(() => {
-    render(<Border value="1px solid tomato" declaration="border" />);
+    const token = {
+      value: '1px solid tomato',
+      declaration: 'border',
+    };
+    render(<Border token={token} />);
   });
 
   it('render given border', () => {
-    const borderredElement = screen.getByTestId('box');
-    const styles = window.getComputedStyle(borderredElement);
+    const borderedElement = screen.getByTestId('box');
+    const styles = window.getComputedStyle(borderedElement);
 
     expect(styles['border']).toBe('1px solid tomato');
   });

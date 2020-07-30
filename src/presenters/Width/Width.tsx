@@ -5,13 +5,13 @@ import Text from '../../ui/Text/Text';
 
 import { Token } from '../TokenDeclaration';
 
-type WidthProps = Token;
+type WidthProps = { token: Token };
 
-const Width: FC<WidthProps> = ({ value }: WidthProps) => {
+const Width: FC<WidthProps> = ({ token }: WidthProps) => {
   return (
     <Card data-testid="WidthSampe">
-      <Box width={value}></Box>
-      <Text isAlternative={true}>{value}</Text>
+      <Box width={token.value}></Box>
+      <Text isAlternative={true}>{token.value}</Text>
     </Card>
   );
 };

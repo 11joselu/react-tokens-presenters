@@ -4,15 +4,15 @@ import Text from '../../ui/Text/Text';
 
 import { Token } from '../TokenDeclaration';
 
-type FontWeightProps = Token;
+type FontWeightProps = { token: Token };
 
-const FontWeight: FC<FontWeightProps> = ({ value }: FontWeightProps) => {
+const FontWeight: FC<FontWeightProps> = ({ token }: FontWeightProps) => {
   return (
     <Card data-testid="FontWeight">
-      <Text data-testid="fontWeightSample" fontWeight={value}>
+      <Text data-testid="fontWeightSample" fontWeight={token.value}>
         Typograpy weight
       </Text>
-      <Text isAlternative={true}>{value}</Text>
+      <Text isAlternative={true}>{token.value}</Text>
     </Card>
   );
 };

@@ -4,7 +4,11 @@ import FontSize from './FontSize';
 
 describe('FontSize', () => {
   beforeEach(() => {
-    render(<FontSize declaration="fontSize" value="20px" />);
+    const token = {
+      value: '20px',
+      declaration: 'fontSize',
+    };
+    render(<FontSize token={token} />);
   });
 
   it('render given FontSize', () => {

@@ -4,7 +4,11 @@ import Spacing from './Spacing';
 
 describe('Spacing', () => {
   beforeEach(() => {
-    render(<Spacing value="10px 10px 5px 3px" declaration="Spacing" />);
+    const token = {
+      value: '10px 10px 5px 3px',
+      declaration: 'Spacing',
+    };
+    render(<Spacing token={token} />);
   });
 
   it('render given Spacing', () => {

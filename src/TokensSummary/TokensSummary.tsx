@@ -46,19 +46,21 @@ const TokensSummary: FC<TokensSummaryProps> = ({
             </tr>
           </thead>
           <tbody>
-            {tokenList.map(({ token, declaration, value }, index) => {
-              const Component = presenters[token];
+            {tokenList.map((tokenItem, index) => {
+              const Component = presenters[tokenItem.token];
 
               if (!Component) {
-                throw new Error(`Presenter '${token}' does not exist`);
+                throw new Error(
+                  `Presenter '${tokenItem.token}' does not exist`
+                );
               }
 
               return (
                 <tr key={index}>
                   <td>
-                    <Component value={value} />
+                    <Component token={tokenItem} />
                   </td>
-                  <td data-testid="declaration">{declaration}</td>
+                  <td data-testid="declaration">{tokenItem.declaration}</td>
                 </tr>
               );
             })}

@@ -4,7 +4,11 @@ import Height from './Height';
 
 describe('Height', () => {
   beforeEach(() => {
-    render(<Height value="100px" declaration="heightVar" />);
+    const token = {
+      value: '100px',
+      declaration: 'heightVar',
+    };
+    render(<Height token={token} />);
   });
 
   it('render given Height', () => {

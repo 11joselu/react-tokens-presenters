@@ -4,7 +4,11 @@ import BorderRadius from './BorderRadius';
 
 describe('BorderRadius', () => {
   beforeEach(() => {
-    render(<BorderRadius value="30%" declaration="borderRadius" />);
+    const token = {
+      value: '30%',
+      declaration: 'borderRadius',
+    };
+    render(<BorderRadius token={token} />);
   });
   it('render given borderRadius', () => {
     const borderredElement = screen.getByTestId('box');

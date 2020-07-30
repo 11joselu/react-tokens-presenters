@@ -4,7 +4,11 @@ import Width from './Width';
 
 describe('Width', () => {
   beforeEach(() => {
-    render(<Width value="40px" declaration="WidthVar" />);
+    const token = {
+      value: '40px',
+      declaration: 'WidthVar',
+    };
+    render(<Width token={token} />);
   });
 
   it('render given Width', () => {

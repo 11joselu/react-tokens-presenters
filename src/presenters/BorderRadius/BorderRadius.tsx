@@ -5,13 +5,17 @@ import Text from '../../ui/Text/Text';
 
 import { Token } from '../TokenDeclaration';
 
-type BoderRadiusProps = Token;
+type BoderRadiusProps = { token: Token };
 
-const BorderRadius: FC<BoderRadiusProps> = ({ value }: BoderRadiusProps) => {
+const BorderRadius: FC<BoderRadiusProps> = ({ token }: BoderRadiusProps) => {
   return (
     <Card data-testid="borderRadius">
-      <Box borderRadius={value} backgroundColor="transparent"></Box>
-      <Text isAlternative={true}>{value}</Text>
+      <Box
+        borderRadius={token.value}
+        backgroundColor="transparent"
+        border="1px solid #91556c"
+      ></Box>
+      <Text isAlternative={true}>{token.value}</Text>
     </Card>
   );
 };

@@ -4,13 +4,13 @@ import Text from '../../ui/Text/Text';
 import Card from '../../ui/Card/Card';
 import { Token } from '../TokenDeclaration';
 
-type ColorProps = Token;
+type ColorProps = { token: Token };
 
-const Color: FC<ColorProps> = ({ value }: ColorProps) => {
+const Color: FC<ColorProps> = ({ token }: ColorProps) => {
   return (
     <Card data-testid="color">
-      <Box backgroundColor={value} border="none" />
-      <Text isAlternative={true}>{value}</Text>
+      <Box backgroundColor={token.value} border="none" />
+      <Text isAlternative={true}>{token.value}</Text>
     </Card>
   );
 };

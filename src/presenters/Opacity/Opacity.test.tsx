@@ -4,7 +4,11 @@ import Opacity from './Opacity';
 
 describe('Opacity', () => {
   beforeEach(() => {
-    render(<Opacity value="0.6" declaration="opacity" />);
+    const token = {
+      value: '0.6',
+      declaration: 'opacity',
+    };
+    render(<Opacity token={token} />);
   });
 
   it('render given Opacity', () => {
