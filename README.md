@@ -73,7 +73,7 @@ const scssReq = ...
 const files = scssReq.keys();
 const tokens = ...
 
-tokens.map((token, index) => <Color {...token} key={index} />)
+tokens.map((token, index) => <Color token={token} key={index} />)
 <TokenSumarry tokens={tokens}/>
 ```
 
