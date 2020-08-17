@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import Card from '../../ui/Card/Card';
 import Text from '../../ui/Text/Text';
+import TokenText from '../../ui/Text/TokenText';
 
 import { Token } from '../TokenDeclaration';
 
@@ -14,7 +15,7 @@ const LineHeight: FC<LineHeightProps> = ({ token }: LineHeightProps) => {
         assumenda sed distinctio quae, quasi repudiandae nam nobis esse non
         excepturi!
       </Text>
-      <Text isAlternative={true}>{token.value}</Text>
+      <TokenText token={token} />
     </Card>
   );
 };

@@ -2,25 +2,56 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Color from './Color';
 
+const COLOR_VALUE = 'red';
+
 describe('Color', () => {
-  beforeEach(() => {
-    const token = {
-      value: 'blue',
-      declaration: 'myVar',
-    };
-    render(<Color token={token} />);
+  describe('renders', () => {
+    beforeEach(() => {
+      renderComponent();
+    });
+
+    it('render given color', () => {
+      const element = screen.getByText(COLOR_VALUE);
+
+      expect(element.textContent).toBe(COLOR_VALUE);
+    });
+
+    it('render circle color sample', () => {
+      const circleElement = screen.getByTestId('box');
+      const styles = window.getComputedStyle(circleElement);
+
+      expect(styles['background-color']).toBe(COLOR_VALUE);
+    });
   });
 
-  it('render given color', () => {
-    const element = screen.getByText('blue');
+  describe('variable reference', () => {
+    beforeEach(() => {
+      const props = {
+        reference: '$colorReference',
+      };
+      renderComponent(props);
+    });
 
-    expect(element.textContent).toBe('blue');
-  });
+    it('render correct value when token has a reference', () => {
+      const borderedElement = screen.getByTestId('box');
+      const styles = window.getComputedStyle(borderedElement);
 
-  it('render circle color sample', () => {
-    const circleElement = screen.getByTestId('box');
-    const styles = window.getComputedStyle(circleElement);
+      expect(styles['background-color']).toBe(COLOR_VALUE);
+    });
 
-    expect(styles['background-color']).toBe('blue');
+    it('render variable value reference', () => {
+      const variableElement = screen.getByText('$colorReference');
+
+      expect(variableElement.textContent).toBe('$colorReference');
+    });
   });
 });
+
+function renderComponent(tokenProps = {}): void {
+  const token = {
+    value: COLOR_VALUE,
+    declaration: 'myVar',
+    ...tokenProps,
+  };
+  render(<Color token={token} />);
+}

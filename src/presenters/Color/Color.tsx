@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import Box from '../../ui/Box/Box';
-import Text from '../../ui/Text/Text';
+import TokenText from '../../ui/Text/TokenText';
 import Card from '../../ui/Card/Card';
 import { Token } from '../TokenDeclaration';
 
@@ -10,7 +10,7 @@ const Color: FC<ColorProps> = ({ token }: ColorProps) => {
   return (
     <Card data-testid="color">
       <Box backgroundColor={token.value} border="none" />
-      <Text isAlternative={true}>{token.value}</Text>
+      <TokenText token={token} />
     </Card>
   );
 };

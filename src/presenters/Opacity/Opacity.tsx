@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import Card from '../../ui/Card/Card';
 import Box from '../../ui/Box/Box';
-import Text from '../../ui/Text/Text';
+import TokenText from '../../ui/Text/TokenText';
 
 import { Token } from '../TokenDeclaration';
 
@@ -11,7 +11,7 @@ const Opacity: FC<OpacityProps> = ({ token }: OpacityProps) => {
   return (
     <Card data-testid="opacity">
       <Box opacity={token.value}></Box>
-      <Text isAlternative={true}>{token.value}</Text>
+      <TokenText token={token} />
     </Card>
   );
 };

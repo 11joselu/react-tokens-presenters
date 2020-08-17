@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import Card from '../../ui/Card/Card';
 import Text from '../../ui/Text/Text';
+import TokenText from '../../ui/Text/TokenText';
 
 import { Token } from '../TokenDeclaration';
 
@@ -12,7 +13,7 @@ const FontWeight: FC<FontWeightProps> = ({ token }: FontWeightProps) => {
       <Text data-testid="fontWeightSample" fontWeight={token.value}>
         Typograpy weight
       </Text>
-      <Text isAlternative={true}>{token.value}</Text>
+      <TokenText token={token} />
     </Card>
   );
 };

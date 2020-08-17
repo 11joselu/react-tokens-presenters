@@ -2,6 +2,8 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Border from './Border';
 
+const BORDER_VALUE = '1px solid tomato';
+
 describe('Border', () => {
   describe('renders', () => {
     beforeEach(() => {
@@ -12,13 +14,13 @@ describe('Border', () => {
       const borderedElement = screen.getByTestId('box');
       const styles = window.getComputedStyle(borderedElement);
 
-      expect(styles['border']).toBe('1px solid tomato');
+      expect(styles['border']).toBe(BORDER_VALUE);
     });
 
     it('render variable value', () => {
-      const variableElement = screen.getByText('1px solid tomato');
+      const variableElement = screen.getByText(BORDER_VALUE);
 
-      expect(variableElement.textContent).toBe('1px solid tomato');
+      expect(variableElement.textContent).toBe(BORDER_VALUE);
     });
   });
 
@@ -34,7 +36,7 @@ describe('Border', () => {
       const borderedElement = screen.getByTestId('box');
       const styles = window.getComputedStyle(borderedElement);
 
-      expect(styles['border']).toBe('1px solid tomato');
+      expect(styles['border']).toBe(BORDER_VALUE);
     });
 
     it('render variable value reference', () => {
@@ -47,7 +49,7 @@ describe('Border', () => {
 
 function renderComponent(tokenProps = {}): void {
   const token = {
-    value: '1px solid tomato',
+    value: BORDER_VALUE,
     declaration: 'border',
     ...tokenProps,
   };
