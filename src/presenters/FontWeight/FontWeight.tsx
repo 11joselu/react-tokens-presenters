@@ -12,7 +12,7 @@ const FontWeight: FC<FontWeightProps> = ({ token }: FontWeightProps) => {
     <Card data-testid="FontWeight">
       <Text
         data-testid="fontWeightSample"
-        fontWeight={token.value}
+        fontWeight={token.value || 'unknown'}
         isAlternative={!token.value}
       >
         {token.value ? 'Typograpy weight' : 'unknown'}

@@ -33,8 +33,8 @@ describe('FontWeight', () => {
     });
 
     it('render correct value when token has a reference', () => {
-      const borderedElement = screen.getByTestId('fontWeightSample');
-      const styles = window.getComputedStyle(borderedElement);
+      const fontSample = screen.getByTestId('fontWeightSample');
+      const styles = window.getComputedStyle(fontSample);
 
       expect(styles['font-weight']).toBe(FONT_WEIGHT_VALUE);
     });
@@ -43,6 +43,34 @@ describe('FontWeight', () => {
       const variableElement = screen.getByText('$fontWeightReference');
 
       expect(variableElement.textContent).toBe('$fontWeightReference');
+    });
+  });
+
+  describe('When value reference is not found', () => {
+    it('renders unknown as font-size value', () => {
+      const props = {
+        reference: '$fontSizeReference',
+        value: undefined,
+      };
+      renderComponent(props);
+
+      const fontSample = screen.getByTestId('fontWeightSample');
+      const styles = window.getComputedStyle(fontSample);
+
+      // Note: jsdom omit non-valid values
+      expect(styles['font-weight']).toBe('unknown');
+    });
+
+    it('renders unknown text', () => {
+      const props = {
+        reference: '$fontSizeReference',
+        value: undefined,
+      };
+      renderComponent(props);
+
+      const unknownElement = screen.getByText('unknown');
+
+      expect(unknownElement).toBeVisible();
     });
   });
 });

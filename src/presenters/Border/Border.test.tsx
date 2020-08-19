@@ -45,6 +45,34 @@ describe('Border', () => {
       expect(variableElement.textContent).toBe('$borderReference');
     });
   });
+
+  describe('When value reference is not found', () => {
+    it('renders unknown as border value', () => {
+      const props = {
+        reference: '$borderReference',
+        value: undefined,
+      };
+      renderComponent(props);
+
+      const boxElement = screen.getByTestId('box');
+      const styles = window.getComputedStyle(boxElement);
+
+      // Note: jsdom omit non-valid values
+      expect(styles['border']).toBe('');
+    });
+
+    it('renders unknown text', () => {
+      const props = {
+        reference: '$borderReference',
+        value: undefined,
+      };
+      renderComponent(props);
+
+      const unknownElement = screen.getByText('unknown');
+
+      expect(unknownElement).toBeVisible();
+    });
+  });
 });
 
 function renderComponent(tokenProps = {}): void {

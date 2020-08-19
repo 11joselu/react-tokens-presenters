@@ -45,6 +45,33 @@ describe('BorderRadius', () => {
       expect(variableElement.textContent).toBe('$radiusReference');
     });
   });
+
+  describe('When value reference is not found', () => {
+    it('renders unknown as border value', () => {
+      const props = {
+        reference: '$borderRadiusReference',
+        value: undefined,
+      };
+      renderComponent(props);
+
+      const boxElement = screen.getByTestId('box');
+      const styles = window.getComputedStyle(boxElement);
+
+      expect(styles['border-radius']).toBe('unknown');
+    });
+
+    it('renders unknown text', () => {
+      const props = {
+        reference: '$borderRadiusReference',
+        value: undefined,
+      };
+      renderComponent(props);
+
+      const unknownElement = screen.getByText('unknown');
+
+      expect(unknownElement).toBeVisible();
+    });
+  });
 });
 
 function renderComponent(tokenProps = {}): void {
