@@ -12,7 +12,7 @@ const Width: FC<WidthProps> = ({ token }: WidthProps) => {
   return (
     <Card data-testid="WidthSampe">
       <Box
-        width={token.value || 'unknown'}
+        width={token.value}
         backgroundColor={token.value ? undefined : 'unknown'}
       >
         {!token.value && <Text isAlternative={true}>unknown</Text>}

@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Token } from '../../presenters/TokenDeclaration';
 import Text from './Text';
+import styled from 'styled-components';
 
 type TokenTextProps = {
   token: Token;

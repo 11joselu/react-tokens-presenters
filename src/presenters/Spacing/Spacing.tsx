@@ -13,8 +13,8 @@ const Spacing: FC<SpacingProps> = ({ token }: SpacingProps) => {
     <Card data-testid="spacing">
       <Box
         padding={value}
-        width={value}
-        height={value}
+        width={token.value}
+        height={token.value}
         backgroundColor={token.value ? undefined : 'unknown'}
       >
         {!token.value && <Text isAlternative={true}>unknown</Text>}

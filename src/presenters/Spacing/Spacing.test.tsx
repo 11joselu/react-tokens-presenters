@@ -62,6 +62,14 @@ describe('Spacing', () => {
       expect(styles['padding']).toBe('');
     });
 
+    it('renders with a default width and height', () => {
+      const boxElement = screen.getByTestId('box');
+      const styles = window.getComputedStyle(boxElement);
+
+      expect(styles['width']).toBe('5rem');
+      expect(styles['height']).toBe('5rem');
+    });
+
     it('renders unknown text', () => {
       const unknownElement = screen.getByText('unknown');
 

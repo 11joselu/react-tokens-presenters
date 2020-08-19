@@ -33,11 +33,11 @@ describe('LineHeight', () => {
       renderComponent(props);
     });
 
-    it('renders unknown as line-height value', () => {
-      const textElement = screen.getByTestId('LineHeightSample');
-      const styles = window.getComputedStyle(textElement);
+    it('renders unknown box element and hide line-height sample', () => {
+      const boxElement = screen.getByTestId('box');
 
-      expect(styles['line-height']).toBe('unknown');
+      expect(boxElement).toBeVisible();
+      expect(screen.queryByTestId('LineHeightSample')).toBeNull();
     });
 
     it('renders unknown text', () => {

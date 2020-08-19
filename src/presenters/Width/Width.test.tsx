@@ -54,11 +54,11 @@ describe('Width', () => {
       renderComponent(props);
     });
 
-    it('renders unknown as width value', () => {
+    it('renders default width value', () => {
       const boxElement = screen.getByTestId('box');
       const styles = window.getComputedStyle(boxElement);
 
-      expect(styles['width']).toBe('');
+      expect(styles['width']).toBe('5rem');
     });
 
     it('renders unknown text', () => {

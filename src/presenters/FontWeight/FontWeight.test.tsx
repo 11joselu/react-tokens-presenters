@@ -55,12 +55,11 @@ describe('FontWeight', () => {
       renderComponent(props);
     });
 
-    it('renders unknown as font-weight value', () => {
-      const fontElement = screen.getByTestId('fontWeightSample');
-      const styles = window.getComputedStyle(fontElement);
+    it('renders unknown box element and hide font-weight sample', () => {
+      const boxElement = screen.getByTestId('box');
 
-      // Note: jsdom omit non-valid values
-      expect(styles['font-weight']).toBe('unknown');
+      expect(boxElement).toBeVisible();
+      expect(screen.queryByTestId('fontWeightSample')).toBeNull();
     });
 
     it('renders unknown text', () => {

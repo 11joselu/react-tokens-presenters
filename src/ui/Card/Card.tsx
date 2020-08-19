@@ -8,9 +8,24 @@ const Card: FC = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  align-items: center;
   > *:first-child {
     margin-right: 1rem;
-    margin-bottom: 1rem;
+
+    p {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      transform: translateY(-50%);
+      background-color: #fbe090;
+      color: #b18621;
+      padding: 4px 0;
+      border-radius: 4px;
+    }
+  }
+
+  p {
+    margin: 0;
   }
 
   @media (max-width: 600) {

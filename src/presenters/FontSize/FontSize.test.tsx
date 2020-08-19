@@ -55,12 +55,11 @@ describe('FontSize', () => {
       renderComponent(props);
     });
 
-    it('renders unknown as font-size value', () => {
-      const fontElement = screen.getByTestId('fontSizeSample');
-      const styles = window.getComputedStyle(fontElement);
+    it('renders unknown box element and hide font-size sample', () => {
+      const boxElement = screen.getByTestId('box');
 
-      // Note: jsdom omit non-valid values
-      expect(styles['font-size']).toBe('');
+      expect(boxElement).toBeVisible();
+      expect(screen.queryByTestId('fontSizeSample')).toBeNull();
     });
 
     it('renders unknown text', () => {
