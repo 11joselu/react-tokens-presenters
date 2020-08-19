@@ -8,12 +8,13 @@ import Box from '../../ui/Box/Box';
 type SpacingProps = { token: Token };
 
 const Spacing: FC<SpacingProps> = ({ token }: SpacingProps) => {
+  const value = token.value || 'unknown';
   return (
     <Card data-testid="spacing">
       <Box
-        padding={token.value}
-        width={token.value}
-        height={token.value}
+        padding={value}
+        width={value}
+        height={value}
         backgroundColor={token.value ? undefined : 'unknown'}
       >
         {!token.value && <Text isAlternative={true}>unknown</Text>}

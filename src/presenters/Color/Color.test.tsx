@@ -47,13 +47,14 @@ describe('Color', () => {
   });
 
   describe('When value reference is not found', () => {
-    it('renders unknown as background-color value', () => {
+    beforeEach(() => {
       const props = {
         reference: '$colorReference',
         value: undefined,
       };
       renderComponent(props);
-
+    });
+    it('renders unknown as background-color value', () => {
       const boxElement = screen.getByTestId('box');
       const styles = window.getComputedStyle(boxElement);
 
@@ -62,12 +63,6 @@ describe('Color', () => {
     });
 
     it('renders unknown text', () => {
-      const props = {
-        reference: '$colorReference',
-        value: undefined,
-      };
-      renderComponent(props);
-
       const unknownElement = screen.getByText('unknown');
 
       expect(unknownElement).toBeVisible();

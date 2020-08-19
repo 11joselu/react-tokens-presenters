@@ -12,7 +12,7 @@ const Opacity: FC<OpacityProps> = ({ token }: OpacityProps) => {
   return (
     <Card data-testid="opacity">
       <Box
-        opacity={token.value}
+        opacity={token.value || 'unknown'}
         backgroundColor={token.value ? undefined : 'unknown'}
       >
         {!token.value && <Text isAlternative={true}>unknown</Text>}

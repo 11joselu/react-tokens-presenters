@@ -47,13 +47,15 @@ describe('FontSize', () => {
   });
 
   describe('When value reference is not found', () => {
-    it('renders unknown as font-size value', () => {
+    beforeEach(() => {
       const props = {
         reference: '$fontSizeReference',
         value: undefined,
       };
       renderComponent(props);
+    });
 
+    it('renders unknown as font-size value', () => {
       const fontElement = screen.getByTestId('fontSizeSample');
       const styles = window.getComputedStyle(fontElement);
 
@@ -62,12 +64,6 @@ describe('FontSize', () => {
     });
 
     it('renders unknown text', () => {
-      const props = {
-        reference: '$fontSizeReference',
-        value: undefined,
-      };
-      renderComponent(props);
-
       const unknownElement = screen.getByText('unknown');
 
       expect(unknownElement).toBeVisible();

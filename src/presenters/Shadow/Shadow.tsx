@@ -11,7 +11,7 @@ const Shadow: FC<ShadowProps> = ({ token }: ShadowProps) => {
   return (
     <Card data-testid="shadow">
       <Box
-        boxShadow={token.value}
+        boxShadow={token.value || 'unknown'}
         backgroundColor={token.value ? undefined : 'unknown'}
       >
         {!token.value && <Text isAlternative={true}>unknown</Text>}

@@ -12,8 +12,8 @@ const Height: FC<HeightProps> = ({ token }: HeightProps) => {
   return (
     <Card data-testid="HeightSampe">
       <Box
-        height={token.value}
-        backgroundColor={token.value ? undefined : 'unknwon'}
+        height={token.value || 'unknown'}
+        backgroundColor={token.value ? undefined : 'unknown'}
       >
         {!token.value && <Text isAlternative={true}>unknown</Text>}
       </Box>

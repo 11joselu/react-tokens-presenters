@@ -15,7 +15,7 @@ const LineHeight: FC<LineHeightProps> = ({ token }: LineHeightProps) => {
     <Card data-testid="lineHeight">
       <Text
         data-testid="LineHeightSample"
-        lineHeight={token.value}
+        lineHeight={token.value || 'unknown'}
         isAlternative={!token.value}
       >
         {token.value ? text : 'unknown'}

@@ -47,13 +47,15 @@ describe('Border', () => {
   });
 
   describe('When value reference is not found', () => {
-    it('renders unknown as border value', () => {
+    beforeEach(() => {
       const props = {
         reference: '$borderReference',
         value: undefined,
       };
       renderComponent(props);
+    });
 
+    it('renders unknown as border value', () => {
       const boxElement = screen.getByTestId('box');
       const styles = window.getComputedStyle(boxElement);
 
@@ -62,12 +64,6 @@ describe('Border', () => {
     });
 
     it('renders unknown text', () => {
-      const props = {
-        reference: '$borderReference',
-        value: undefined,
-      };
-      renderComponent(props);
-
       const unknownElement = screen.getByText('unknown');
 
       expect(unknownElement).toBeVisible();

@@ -47,13 +47,15 @@ describe('FontWeight', () => {
   });
 
   describe('When value reference is not found', () => {
-    it('renders unknown as font-size value', () => {
+    beforeEach(() => {
       const props = {
         reference: '$fontSizeReference',
         value: undefined,
       };
       renderComponent(props);
+    });
 
+    it('renders unknown as font-weight value', () => {
       const fontElement = screen.getByTestId('fontWeightSample');
       const styles = window.getComputedStyle(fontElement);
 
@@ -62,12 +64,6 @@ describe('FontWeight', () => {
     });
 
     it('renders unknown text', () => {
-      const props = {
-        reference: '$fontSizeReference',
-        value: undefined,
-      };
-      renderComponent(props);
-
       const unknownElement = screen.getByText('unknown');
 
       expect(unknownElement).toBeVisible();
