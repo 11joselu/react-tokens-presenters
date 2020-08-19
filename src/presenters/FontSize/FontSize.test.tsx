@@ -11,8 +11,8 @@ describe('FontSize', () => {
     });
 
     it('render given FontSize', () => {
-      const FontSizeredElement = screen.getByTestId('fontSizeSample');
-      const styles = window.getComputedStyle(FontSizeredElement);
+      const fontElement = screen.getByTestId('fontSizeSample');
+      const styles = window.getComputedStyle(fontElement);
 
       expect(styles['font-size']).toBe(FONT_SIZE_VALUE);
     });
@@ -33,8 +33,8 @@ describe('FontSize', () => {
     });
 
     it('render correct value when token has a reference', () => {
-      const fontSizeElement = screen.getByTestId('fontSizeSample');
-      const styles = window.getComputedStyle(fontSizeElement);
+      const fontElement = screen.getByTestId('fontSizeSample');
+      const styles = window.getComputedStyle(fontElement);
 
       expect(styles['font-size']).toBe(FONT_SIZE_VALUE);
     });
@@ -54,8 +54,8 @@ describe('FontSize', () => {
       };
       renderComponent(props);
 
-      const fontSizeElement = screen.getByTestId('fontSizeSample');
-      const styles = window.getComputedStyle(fontSizeElement);
+      const fontElement = screen.getByTestId('fontSizeSample');
+      const styles = window.getComputedStyle(fontElement);
 
       // Note: jsdom omit non-valid values
       expect(styles['font-size']).toBe('');

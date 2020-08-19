@@ -12,8 +12,8 @@ describe('Shadow', () => {
   });
 
   it('render given Shadow', () => {
-    const ShadowredElement = screen.getByTestId('box');
-    const styles = window.getComputedStyle(ShadowredElement);
+    const boxElement = screen.getByTestId('box');
+    const styles = window.getComputedStyle(boxElement);
 
     expect(styles['box-shadow']).toBe('15px 15px 27px #e1e1e3');
   });

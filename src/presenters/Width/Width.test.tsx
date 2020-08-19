@@ -12,8 +12,8 @@ describe('Width', () => {
   });
 
   it('render given Width', () => {
-    const WidthredElement = screen.getByTestId('box');
-    const styles = window.getComputedStyle(WidthredElement);
+    const boxElement = screen.getByTestId('box');
+    const styles = window.getComputedStyle(boxElement);
 
     expect(styles['width']).toBe('40px');
   });

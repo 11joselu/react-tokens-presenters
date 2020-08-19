@@ -12,8 +12,8 @@ describe('Spacing', () => {
   });
 
   it('render given Spacing', () => {
-    const SpacingredElement = screen.getByTestId('box');
-    const styles = window.getComputedStyle(SpacingredElement);
+    const boxElement = screen.getByTestId('box');
+    const styles = window.getComputedStyle(boxElement);
 
     expect(styles['padding']).toBe('10px 10px 5px 3px');
   });

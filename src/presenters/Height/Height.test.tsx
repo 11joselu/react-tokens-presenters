@@ -12,8 +12,8 @@ describe('Height', () => {
   });
 
   it('render given Height', () => {
-    const HeightredElement = screen.getByTestId('box');
-    const styles = window.getComputedStyle(HeightredElement);
+    const boxElement = screen.getByTestId('box');
+    const styles = window.getComputedStyle(boxElement);
 
     expect(styles['height']).toBe('100px');
   });

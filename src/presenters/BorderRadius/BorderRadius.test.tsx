@@ -11,8 +11,8 @@ describe('BorderRadius', () => {
     });
 
     it('render given borderRadius', () => {
-      const borderredElement = screen.getByTestId('box');
-      const styles = window.getComputedStyle(borderredElement);
+      const boxElement = screen.getByTestId('box');
+      const styles = window.getComputedStyle(boxElement);
 
       expect(styles['border-radius']).toBe(BORDER_RADIUS_VALUE);
     });
@@ -33,8 +33,8 @@ describe('BorderRadius', () => {
     });
 
     it('render correct value when token has a reference', () => {
-      const borderedElement = screen.getByTestId('box');
-      const styles = window.getComputedStyle(borderedElement);
+      const boxElement = screen.getByTestId('box');
+      const styles = window.getComputedStyle(boxElement);
 
       expect(styles['border-radius']).toBe(BORDER_RADIUS_VALUE);
     });

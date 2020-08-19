@@ -11,8 +11,8 @@ describe('FontWeight', () => {
     });
 
     it('render given FontSize', () => {
-      const FontSizeredElement = screen.getByTestId('fontWeightSample');
-      const styles = window.getComputedStyle(FontSizeredElement);
+      const fontElement = screen.getByTestId('fontWeightSample');
+      const styles = window.getComputedStyle(fontElement);
 
       expect(styles['font-weight']).toBe(FONT_WEIGHT_VALUE);
     });
@@ -33,8 +33,8 @@ describe('FontWeight', () => {
     });
 
     it('render correct value when token has a reference', () => {
-      const fontSample = screen.getByTestId('fontWeightSample');
-      const styles = window.getComputedStyle(fontSample);
+      const fontElement = screen.getByTestId('fontWeightSample');
+      const styles = window.getComputedStyle(fontElement);
 
       expect(styles['font-weight']).toBe(FONT_WEIGHT_VALUE);
     });
@@ -54,8 +54,8 @@ describe('FontWeight', () => {
       };
       renderComponent(props);
 
-      const fontSample = screen.getByTestId('fontWeightSample');
-      const styles = window.getComputedStyle(fontSample);
+      const fontElement = screen.getByTestId('fontWeightSample');
+      const styles = window.getComputedStyle(fontElement);
 
       // Note: jsdom omit non-valid values
       expect(styles['font-weight']).toBe('unknown');

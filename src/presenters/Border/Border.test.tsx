@@ -11,8 +11,8 @@ describe('Border', () => {
     });
 
     it('render given border', () => {
-      const borderedElement = screen.getByTestId('box');
-      const styles = window.getComputedStyle(borderedElement);
+      const boxElement = screen.getByTestId('box');
+      const styles = window.getComputedStyle(boxElement);
 
       expect(styles['border']).toBe(BORDER_VALUE);
     });
@@ -33,8 +33,8 @@ describe('Border', () => {
     });
 
     it('render correct value when token has a reference', () => {
-      const borderedElement = screen.getByTestId('box');
-      const styles = window.getComputedStyle(borderedElement);
+      const boxElement = screen.getByTestId('box');
+      const styles = window.getComputedStyle(boxElement);
 
       expect(styles['border']).toBe(BORDER_VALUE);
     });

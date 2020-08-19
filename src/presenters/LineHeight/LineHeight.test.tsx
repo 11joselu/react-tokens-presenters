@@ -12,8 +12,8 @@ describe('LineHeight', () => {
   });
 
   it('render given LineHeight', () => {
-    const LineHeightredElement = screen.getByTestId('LineHeightSample');
-    const styles = window.getComputedStyle(LineHeightredElement);
+    const textElement = screen.getByTestId('LineHeightSample');
+    const styles = window.getComputedStyle(textElement);
 
     expect(styles['line-height']).toBe('1.4rem');
   });

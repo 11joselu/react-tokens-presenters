@@ -12,8 +12,8 @@ describe('Opacity', () => {
   });
 
   it('render given Opacity', () => {
-    const OpacityredElement = screen.getByTestId('box');
-    const styles = window.getComputedStyle(OpacityredElement);
+    const boxElement = screen.getByTestId('box');
+    const styles = window.getComputedStyle(boxElement);
 
     expect(styles['opacity']).toBe('0.6');
   });
