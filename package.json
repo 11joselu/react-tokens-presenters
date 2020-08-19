@@ -1,6 +1,6 @@
 {
   "name": "react-tokens-presenters",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "files": [
