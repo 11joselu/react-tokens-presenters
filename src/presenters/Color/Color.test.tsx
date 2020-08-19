@@ -17,8 +17,8 @@ describe('Color', () => {
     });
 
     it('render circle color sample', () => {
-      const colorElement = screen.getByTestId('box');
-      const styles = window.getComputedStyle(colorElement);
+      const colorBoxElement = screen.getByTestId('box');
+      const styles = window.getComputedStyle(colorBoxElement);
 
       expect(styles['background-color']).toBe(COLOR_VALUE);
     });
@@ -33,8 +33,8 @@ describe('Color', () => {
     });
 
     it('render correct value when token has a reference', () => {
-      const colorElement = screen.getByTestId('box');
-      const styles = window.getComputedStyle(colorElement);
+      const colorBoxElement = screen.getByTestId('box');
+      const styles = window.getComputedStyle(colorBoxElement);
 
       expect(styles['background-color']).toBe(COLOR_VALUE);
     });
@@ -54,11 +54,23 @@ describe('Color', () => {
       };
       renderComponent(props);
 
-      const borderedElement = screen.getByTestId('box');
-      const styles = window.getComputedStyle(borderedElement);
+      const colorBoxElement = screen.getByTestId('box');
+      const styles = window.getComputedStyle(colorBoxElement);
 
       // Note: jsdom omit non-valid values
       expect(styles['background-color']).toBe('');
+    });
+
+    it('renders unknown text', () => {
+      const props = {
+        reference: '$colorReference',
+        value: undefined,
+      };
+      renderComponent(props);
+
+      const unknownElement = screen.getByText('unknown');
+
+      expect(unknownElement).toBeVisible();
     });
   });
 });
