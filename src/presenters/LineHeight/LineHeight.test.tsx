@@ -2,25 +2,29 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import LineHeight from './LineHeight';
 
+const LINE_HEIGHT_VALUE = '1.4rem';
+
 describe('LineHeight', () => {
-  beforeEach(() => {
-    const token = {
-      value: '1.4rem',
-      declaration: 'LineHeight',
-    };
-    render(<LineHeight token={token} />);
-  });
+  describe('renders', () => {
+    beforeEach(() => {
+      const token = {
+        value: LINE_HEIGHT_VALUE,
+        declaration: 'LineHeight',
+      };
+      render(<LineHeight token={token} />);
+    });
 
-  it('render given LineHeight', () => {
-    const textElement = screen.getByTestId('LineHeightSample');
-    const styles = window.getComputedStyle(textElement);
+    it('render given LineHeight', () => {
+      const textElement = screen.getByTestId('LineHeightSample');
+      const styles = window.getComputedStyle(textElement);
 
-    expect(styles['line-height']).toBe('1.4rem');
-  });
+      expect(styles['line-height']).toBe(LINE_HEIGHT_VALUE);
+    });
 
-  it('render variable value', () => {
-    const variableElement = screen.getByText('1.4rem');
+    it('render variable value', () => {
+      const variableElement = screen.getByText(LINE_HEIGHT_VALUE);
 
-    expect(variableElement.textContent).toBe('1.4rem');
+      expect(variableElement.textContent).toBe(LINE_HEIGHT_VALUE);
+    });
   });
 });

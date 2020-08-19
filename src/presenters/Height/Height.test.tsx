@@ -2,25 +2,29 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Height from './Height';
 
+const HEIGHT_VALUE = '100px';
+
 describe('Height', () => {
-  beforeEach(() => {
-    const token = {
-      value: '100px',
-      declaration: 'heightVar',
-    };
-    render(<Height token={token} />);
-  });
+  describe('renders', () => {
+    beforeEach(() => {
+      const token = {
+        value: HEIGHT_VALUE,
+        declaration: 'heightVar',
+      };
+      render(<Height token={token} />);
+    });
 
-  it('render given Height', () => {
-    const boxElement = screen.getByTestId('box');
-    const styles = window.getComputedStyle(boxElement);
+    it('render given Height', () => {
+      const boxElement = screen.getByTestId('box');
+      const styles = window.getComputedStyle(boxElement);
 
-    expect(styles['height']).toBe('100px');
-  });
+      expect(styles['height']).toBe(HEIGHT_VALUE);
+    });
 
-  it('render variable value', () => {
-    const variableElement = screen.getByText('100px');
+    it('render variable value', () => {
+      const variableElement = screen.getByText(HEIGHT_VALUE);
 
-    expect(variableElement.textContent).toBe('100px');
+      expect(variableElement.textContent).toBe(HEIGHT_VALUE);
+    });
   });
 });
