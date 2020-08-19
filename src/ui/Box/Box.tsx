@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
+const DEFAULT_SIZE = '4rem';
+
 type BlockProps = {
   borderRadius?: string;
   border?: string;
@@ -17,8 +19,8 @@ const Box: FC<BlockProps> = styled.div.attrs({
 })`
   border: ${(props: BlockProps) => props.border || 'none'};
   border-radius: ${(props: BlockProps) => props.borderRadius || 0};
-  width: ${(props: BlockProps) => props.width || '5rem'};
-  height: ${(props: BlockProps) => props.height || '5rem'};
+  width: ${(props: BlockProps) => props.width || DEFAULT_SIZE};
+  height: ${(props: BlockProps) => props.height || DEFAULT_SIZE};
   padding: ${(props: BlockProps) => props.padding || 0};
   background-color: ${(props: BlockProps) =>
     props.backgroundColor || '#ea4c89'};

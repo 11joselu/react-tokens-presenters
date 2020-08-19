@@ -10,17 +10,18 @@ const Card: FC = styled.div`
   flex-direction: row;
   align-items: center;
   > *:first-child {
-    margin-right: 1rem;
+    margin-right: 1.5rem;
 
     p {
-      position: absolute;
+      position: relative;
       top: 50%;
       width: 100%;
       transform: translateY(-50%);
-      background-color: #fbe090;
+      background-color: #fff5d7;
       color: #b18621;
-      padding: 4px 0;
+      padding: 6px;
       border-radius: 4px;
+      margin-right: 4px;
     }
   }
 
