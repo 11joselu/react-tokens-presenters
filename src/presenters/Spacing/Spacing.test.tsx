@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Spacing from './Spacing';
+import { DEFAULT_SIZE } from '../../ui/Box/Box';
 
 const SPACING_VALUE = '10px 10px 5px 3px';
 
@@ -66,8 +67,8 @@ describe('Spacing', () => {
       const boxElement = screen.getByTestId('box');
       const styles = window.getComputedStyle(boxElement);
 
-      expect(styles['width']).toBe('5rem');
-      expect(styles['height']).toBe('5rem');
+      expect(styles['width']).toBe(DEFAULT_SIZE);
+      expect(styles['height']).toBe(DEFAULT_SIZE);
     });
 
     it('renders unknown text', () => {

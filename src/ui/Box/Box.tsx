@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-const DEFAULT_SIZE = '4rem';
+export const DEFAULT_SIZE = '4rem';
 
 type BlockProps = {
   borderRadius?: string;

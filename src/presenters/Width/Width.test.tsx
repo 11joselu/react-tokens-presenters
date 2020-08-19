@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Width from './Width';
+import { DEFAULT_SIZE } from '../../ui/Box/Box';
 
 const WIDTH_VALUE = '40px';
 
@@ -58,7 +59,7 @@ describe('Width', () => {
       const boxElement = screen.getByTestId('box');
       const styles = window.getComputedStyle(boxElement);
 
-      expect(styles['width']).toBe('5rem');
+      expect(styles['width']).toBe(DEFAULT_SIZE);
     });
 
     it('renders unknown text', () => {

@@ -17,8 +17,8 @@ const Card: FC = styled.div`
       top: 50%;
       width: 100%;
       transform: translateY(-50%);
-      background-color: #fff5d7;
-      color: #b18621;
+      background-color: #f4f3f0;
+      color: #b7b7b7;
       padding: 6px;
       border-radius: 4px;
       margin-right: 4px;
