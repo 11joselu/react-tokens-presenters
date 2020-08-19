@@ -24,6 +24,11 @@ const Box: FC<BlockProps> = styled.div.attrs({
     props.backgroundColor || '#ea4c89'};
   opacity: ${(props: BlockProps) => props.opacity || 1};
   box-shadow: ${(props: BlockProps) => props.boxShadow || 'none'};
+  position: relative;
+
+  p {
+    text-align: center;
+  }
 `;
 
 export default Box;

@@ -10,8 +10,12 @@ type FontSizeProps = { token: Token };
 const FontSize: FC<FontSizeProps> = ({ token }: FontSizeProps) => {
   return (
     <Card data-testid="FontSize">
-      <Text data-testid="fontSizeSample" fontSize={token.value}>
-        Typograpy scale
+      <Text
+        data-testid="fontSizeSample"
+        fontSize={token.value}
+        isAlternative={!token.value}
+      >
+        {token.value ? 'Typograpy scale' : 'unknown'}
       </Text>
       <TokenText token={token} />
     </Card>
