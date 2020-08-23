@@ -26,7 +26,8 @@
     "Storybook",
     "Design Tokens",
     "Tokens",
-    "Design systems"
+    "Design systems",
+    "react-design-tokens"
   ],
   "author": "Jose Cabrera",
   "license": "MIT",
