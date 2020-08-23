@@ -23,7 +23,10 @@
   },
   "keywords": [
     "Presenter",
-    "Storybook"
+    "Storybook",
+    "Design Tokens",
+    "Tokens",
+    "Design systems"
   ],
   "author": "Jose Cabrera",
   "license": "MIT",
